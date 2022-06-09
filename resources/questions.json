@@ -1,0 +1,1340 @@
+{
+	"categories": [{
+			"name": "Windows - Instalacja",
+			"questions": [{
+				"question": "Proszę wskazać poprawne odpowiedzi na poniższe pytania dotyczące instalacji systemu Windows 7:",
+				"answers": [
+					"Plik odpowiedzi może zostać wykorzystany do konfiguracji instalowanego systemu",
+					"Plik odpowiedzi może zostać wykorzystany do przeprowadzenia tzw. Instalacji nienadzorowanej",
+					"Plik odpowiedzi zawarty jest w pliku install.wim"
+				],
+				"values": [true, true, false]
+			}, {
+				"question": "Proszę wskazać poprawne odpowiedzi na poniższe pytania dotyczące instalacji systemu Windows 7:",
+				"answers": [
+					"W celu przeprowadzenia instalacji konieczne jest wcześniejsze utworzenie pliku odpowiedzi",
+					"Instalacja przeprowadzana jest z obrazu systemu operacyjnego zawartego w pliku .wim",
+					"Obraz instalacyjny może zawierać kilka edycji systemu operacyjnego",
+					"Instalacja może zostać zainicjalizowana jedynie ze specjalnej platformy instalacyjnej Windows PE"
+				],
+				"values": [false, true, true, false]
+			}, {
+				"question": "Proszę wskazać poprawne odpowiedzi na poniższe pytania dotyczące instalacji systemu Windows 7:",
+				"answers": [
+					"Instalacja nienadzorowana polega na zdalnym uruchomieniu instalacji na wybranym komputerze",
+					"Instalacja nienadzorowana polega na przeprowadzeniu instalacji z wykorzystaniem pliku odpowiedzi dostarczającego kreatorowi informacji potrzebnych do przeprowadzenia instalacji",
+					"Plik odpowiedzi może zostać wykorzystany do konfiguracji instalowanego systemu"
+				],
+				"values": [false, true, true]
+			}, {
+				"question": "Proszę wskazać poprawne odpowiedzi na poniższe pytania dotyczące instalacji systemu Windows 7:",
+				"answers": [
+					"Typowa instalacja systemu nie wymaga interakcji z użytkownikiem",
+					"Instalacja przeprowadzana jest z obrazu systemu operacyjnego zawartego w pliku .wim",
+					"W celu przeprowadzenia instalacji konieczne jest wcześniejsze utworzenie pliku odpowiedzi",
+					"Obraz instalacyjny może zawierać kilka edycji systemu operacyjnego"
+				],
+				"values": [false, false, false, true]
+			}, {
+				"question": "Proszę wskazać poprawne odpowiedzi na poniższe pytania dotyczące narzędzia Deployment Image Servicing and Management (DISM):",
+				"answers": [
+					"DISM pozwala na przeglądanie listy pakietów obrazu instalacyjnego ale nie na ich usuwanie",
+					"DISM pozwala na modyfikację obrazu instalacyjnego",
+					"DISM służy do stworzenia pliku odpowiedzi"
+				],
+				"values": [false, true, false]
+			}, {
+				"question": "Proszę wskazać poprawne odpowiedzi na poniższe pytania dotyczące narzędzia Deployment Image Servicing and Management (DISM) w systemie Windows 7:",
+				"answers": [
+					"DISM pozwala na dołączenie pliku odpowiedzi do obrazu instalacyjnego",
+					"DISM pozwala na dodanie nowych sterowników do obrazu instalacyjnego",
+					"DISM jest graficznych narzędziem pozwalającym na zaplanowanie procesu instalacji"
+				],
+				"values": [true, true, false]
+			}, {
+				"question": "Które z poniższych zadań można wykonać za pomocą narzędzia Deployment Image Servicing and Management (DISM)?",
+				"answers": [
+					"Wygenerować nowy plik odpowiedzi",
+					"Dodać sterownik urządzenia do obrazu instalacyjnego",
+					"Zapisać klucz produktu w obrazie instalacyjnym",
+					"Zmienić strefę czasową dla obrazu instalacyjnego"
+				],
+				"values": [false, true, true, true]
+			}, {
+				"question": "Proszę wskazać poprawne odpowiedzi na poniższe pytania dotyczące narzędzia Deployment Image Servicing and Management (DISM):",
+				"answers": [
+					"Obraz systemu na którym ma działać DISM powinien zostać podmontowany (by można było wykonać wszystkie możliwe polecenia)",
+					"DISM jest narzędziem tekstowym",
+					"DISM pozwala na przeglądanie listy pakietów obrazu instalacyjnego ale nie na ich usuwanie"
+				],
+				"values": [true, true, false]
+			}, {
+				"question": "Proszę wskazać poprawne odpowiedzi na poniższe pytania dotyczące narzędzia Deployment Image Servicing and Management (DISM) w systemie Windows 7:",
+				"answers": [
+					"DISM umożliwia dodanie do obrazu instalacyjnego klucza produktu",
+					"DISM pozwala na dołączenie pliku odpowiedzi do obrazu instalacyjnego",
+					"DISM jest narzędziem tekstowym"
+				],
+				"values": [true, true, true]
+			}]
+		}, {
+			"name": "Windows - Podstawy konfiguracji",
+			"questions": [{
+				"question": "Zaznacz wszystkie prawidłowe odpowiedzi dotyczące mechanizmu bibliotek w systemie Windows 7: ",
+				"answers": [
+					"Domyślnym folderem zapisu jest pierwszy uwzględniony w bibliotece folder ",
+					"Biblioteka nie jest folderem dyskowym ",
+					"Biblioteki służą do zarządzania i organizowania danych z rożnych lokalizacji.",
+					"Biblioteka jest folderem dyskowym.",
+					"Biblioteki nie są automatycznie indeksowane",
+					"Usunięcie biblioteki powoduje usunięcie wszystkich plików w niej zawartych.",
+					"Usunięcie pliku w bibliotece nie usuwa go z jego fizycznej lokalizacji"
+				],
+				"values": [true, true, true, false, false, false, false]
+			}, {
+				"question": "Zaznacz wszystkie prawidłowe odpowiedzi dotyczące funkcji Ochrona systemu w Windows 7:  ",
+				"answers": [
+					"Jest automatycznie włączona dla dysku systemowego",
+					"Można ją włączyć dla dysków niesystemowych",
+					"Zapisuje informacje o poprzednich wersjach zmodyfikowanych plików",
+					"Wyłączenie Ochrony dla wybranego dysku NIE powoduje usunięcia utworzonych do tego momentu czasu punktów przywracania systemu"
+				],
+				"values": [true, true, true, false]
+			}, {
+				"question": "Zaznacz wszystkie prawidłowe odpowiedzi dotyczące odtwarzania plików i folderów w systemie Windows 7 w zakładce „Poprzednie wersje”: ",
+				"answers": [
+					"Odtwarzanie pliku za pomocą przycisku „Kopiuj” kopiuje plik do wybranej przez użytkownika lokalizacji",
+					"Odtwarzanie folderu z punktu przywracania systemu jest możliwe nawet jeśli usunie się go poprzez Shift + Del",
+					"Odtworzenie folderu za pomocą przycisku „Kopiuj” do oryginalnej lokalizacji spowoduje natychmiastowe zastąpienie folderu o tej samej nazwie w tej lokalizacji (bez ostrzeżenia użytkownika)",
+					"Poprzednią wersję pliku można otworzyć, skopiować lub przywrócić zarówno z kopii zapasowej jak i punktu przywracania systemu"
+				],
+				"values": [true, true, false, false]
+			}, {
+				"question": "Zaznacz wszystkie prawidłowe odpowiedzi dotyczące punktów przywracania systemu w Windows 7:",
+				"answers": [
+					"Aby je utworzyć, Ochrona systemu musi być włączona",
+					"Są tworzone przy ważnych zdarzeniach systemowych (np. Windows Upadate)",
+					"Umożliwiają przywrócenie tylko całego systemu (bez możliwości wyboru pojedynczego pliku)",
+					"Poprzednia wersja pliku pojawia się w zakładce „Poprzednie wersje” od razu po utworzeniu punktu (bez modyfikacji pliku)"
+				],
+				"values": [true, true, false, false]
+			}, {
+				"question": "Zaznacz wszystkie prawidłowe odpowiedzi dotyczące tworzenia kopii zapasowych plików w Windows 7: ",
+				"answers": [
+					"Kopia może być zapisana na CD/DVD",
+					"Domyślnie mechanizm nie jest skonfigurowany",
+					"Umożliwia wykonanie kopii plików danych użytkownika",
+					"Nie można ustalić harmonogramu automatycznego tworzenia kopii"
+				],
+				"values": [true, true, true, false]
+			}, {
+				"question": "Zaznacz wszystkie prawidłowe odpowiedzi dotyczące koligacji procesów (proces affinity) w systemie Windows 7: ",
+				"answers": [
+					"Jest to przyporządkowanie procesowi wybranych rdzeni lub procesów.",
+					"Domyślnie proces jest uruchamiany na wszystkich dostępnych rdzeniach.",
+					"Jedyną wbudowaną w system operacyjny Windows 7 metodą ustawienia koligacji jest wykorzystanie Menadżera zadań.",
+					"Ustawienie koligacji w Menadżerze zadań jest trwałe i po zamknięciu aplikacji nie jest przywracana domyślna konfiguracja."
+				],
+				"values": [true, true, false, false]
+			}, {
+				"question": "Zaznacz wszystkie prawidłowe odpowiedzi dotyczące rejestru Windows 7: ",
+				"answers": [
+					"Klucze rejestru pełnią rolę podobną do folderów, a wartości pełnią rolę podobną do plików",
+					"Rejestr ma strukturę drzewiastą, której korzeniem jest Komputer",
+					"Rejestr przechowuje m.in. ustawienia sprzętu, systemu, kont i programów użytkownikam",
+					"Przechowuje informacje konfiguracyjne systemu",
+					"Windows posiada wbudowany edytor rejestru regedit.exe.",
+					"Zmiany w rejestrze ZAWSZE są uwzględniane po ponownym zalogowaniu użytkownika",
+					"Wszystkie klucze lub wartości zapisane w rejestrze są w postaci nieszyfrowanej.",
+					"Jest składowany na dysku w postaci JEDNEGO pliku."
+				],
+				"values": [true, true, true, true, true, false, false, false]
+			}, {
+				"question": "Wskaż wszystkie poprawne odpowiedzi dotyczących kopii zapasowej plików w systemie Windows 7: ",
+				"answers": [
+					"Po skonfigurowaniu wykonywania kopii zapasowej, system Windows śledzi zmiany i dodaje je do kopii zapasowej",
+					"Kopie zapasowe można wykonywać tylko ręcznie",
+					"Nie jest możliwe wykonanie kopii zapasowej do lokalizacji sieciowej",
+					"Domyślnie mechanizm kopii zapasowej jest włączony i obejmuje podstawowe foldery systemowe"
+				],
+				"values": [true, false, false, false]
+			}, {
+				"question": "Wskaż prawidłowe odpowiedzi dotyczące rejestru systemu Windows 7: ",
+				"answers": [
+					"Gałąź HKML\\Hardware zawiera informacje o sprzęcie",
+					"Tylko dwie główne gałęzie rejestru są podstawowe (nie są aliasami)",
+					"Wyeksportowane pliki rejestru mają rozszerzenie .reg",
+					"Rejestr zawiera mechanizmy kontroli poprawności wprowadzanych wartości"
+				],
+				"values": [true, true, true, false]
+			}, {
+				"question": "Wybierz preferowane sposoby edycji rejestru systemu Windows 7:",
+				"answers": [
+					"Uruchamianie odpowiednio utworzonego pliku *.reg",
+					"Wykorzystanie aplikacji regedit.exe",
+					"Wykorzystując polecenie konsolowe „reg edit”",
+					"Ręczna edycja plików rejestru przy użyciu zwykłego edytora tekst"
+				],
+				"values": [true, true, false, false]
+			}, {
+				"question": "Możliwość edycji i dostępu do kluczy rejestru systemowego dla użytkowników systemu Windows regulowana jest poprzez: ",
+				"answers": [
+					"Uprawnienia w bazie rejestru",
+					"Obiekty GPO",
+					"Uprawnienia do plików rejestru DAT",
+					"Ustawienia w plikach INI"
+				],
+				"values": [true, false, false, false]
+			}, {
+				"question": "Metodami ochrony rejestru nie są",
+				"answers": [
+					"Szyfrowanie plików rejestru",
+					"Eksport wybranego klucza, gałęzi lub całego rejestru do pliku *.reg",
+					"Wykonywanie kopii zapasowej całego rejestru",
+					"Wykonywanie kopii zapasowej wartości pojedynczego parametru"
+				],
+				"values": [true, false, false, false]
+			}, {
+				"question": "Domyślnie indeksowanie w systemie Windows 7 jest włączone dla: ",
+				"answers": [
+					"menu start",
+					"bibliotek",
+					"całego komputera",
+					"plików i programów systemowych"
+				],
+				"values": [true, true, false, false]
+			}, {
+				"question": "Domyślnie mechanizm Ochrona systemu w Windows 7 jest włączona dla: ",
+				"answers": [
+					"dysku systemowego (dysku, na którym zainstalowany jest Windows 7)",
+					"dysku wymiennego",
+					"dysku z danymi użytkownika (nie systemowego)",
+					"dysku sformatowanego w systemie plików FAT"
+				],
+				"values": [true, false, false, false]
+			}, {
+				"question": "Jakich zmian wyglądu konsoli użytkownik może dokonać we „Właściwościach” okna w systemie Windows 7?",
+				"answers": [
+					"Zmiana rozmiaru znaków",
+					"Zmiana koloru tła i czcionki",
+					"Zmiana pozycji okna na ekranie",
+					"Zmiana wyrównania tekstu (np.: wyjustowanie tekstu)"
+				],
+				"values": [true, true, true, false]
+			}, {
+				"question": "Gałąź HKLM rejestru systemu Windows 7 zawiera",
+				"answers": [
+					"Konfigurację lokalnego komputera",
+					"Domyślną ścieżkę instalacji oprogramowania",
+					"Ustawienia aktualnie używanego profilu sprzętowego",
+					"Profil aktualnie zalogowanego użytkownika"
+				],
+				"values": [true, true, true, false]
+			}, {
+				"question": "Gdzie można zmienić na stałe rozmiary i kolorystykę okna dialogowego w systemie Windows 7:",
+				"answers": [
+					"W rejestrze, w kluczu HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Command Processor zmieniając parameter “DefaulttColor”",
+					"W zakładkach opcji “Domyślne” wybranej z menu kontekstowego belki tytułowej okna",
+					"W zakładkach opcji „Właściwości” wybranej z menu kontekstowego belki tytułowej okna",
+					"Wpisując komendę „command procesor set color” w konsoli, np.: command procesor set color 250"
+				],
+				"values": [true, true, false, false]
+			}]
+		}, {
+			"name": "Windows - UGP",
+			"questions": [{
+				"question": "Możliwość edycji i dostępu do kluczy rejestru systemowego dla użytkowników Windowsa regulowana jest poprzez:",
+				"answers": [
+					"Uprawnienia w bazie rejestru.", "Uprawnienia do plików rejestru DAT.", "Ustawienia w plikach INI.", "Obiekty GPO."
+				],
+				"values": [true, false, false, false]
+			}, {
+				"question": "Nadawanie praw w systemie Windows może odbywać się poprzez:",
+				"answers": [
+					"Modyfikacja i przypisanie obiektów GPO.", "Przypisanie do odpowiednich grup wbudowanych.", "Zmianę uprawnień do pliku."
+				],
+				"values": [true, true, false]
+			}, {
+				"question": "Lokalna polityka bezpieczeństwa (lokalne obiekty GPO) to:",
+				"answers": [
+					"Prawa do wykonywania operacji udostępnianych przez system.", "Pewien szablonu nakładany na rejestr i pliki ini podczas logowania.", "Ochrona (uprawnienia dostępu) drukarek.", "Ochrona (uprawnienia dostępu) poszczególnych gałęzi i podgałęzi rejestru."
+				],
+				"values": [true, true, false, false]
+			}, {
+				"question": "Możliwość do drukowania przez użytkowników regulowana jest:",
+				"answers": [
+					"Poprzez uprawnienia do zasobów.", "Poprzez GPO.", "Poprzez przypisanie do grupy wbudowanej Operatorzy drukowania."
+				],
+				"values": [true, false, false]
+			}, {
+				"question": "Mechanizm UAC w systemie Windows7:",
+				"answers": [
+					"Wprowadza interaktywne potwierdzanie operacji krytycznych w systemie.", "Definiuje cztery poziomy kontroli.", "Zapewnia funkcjonalność firewalla.", "Wprowadza potwierdzenie hasłem operacji krytycznych w systemie."
+				],
+				"values": [true, true, false, false]
+			}, {
+				"question": "Mechanizm User Access Control:",
+				"answers": [
+					"Chroni system przed złośliwym oprogramowaniem.", "Chroni przed niekompetencją użytkowników.", "Pozwala modyfikować uprawnienia użytkowników dla drukarek.", "Został wprowadzony w systemie Windows XP."
+				],
+				"values": [true, true, false, false]
+			}, {
+				"question": "Oceń prawdziwość zdań dotyczących mechanizmu UAC:",
+				"answers": [
+					"Sprawia, że nawet administrator pracuje z prawami zwykłego użytkownika.", "Wirtualizuje niektóre foldery systemowe i gałęzie rejestru.", "Dostępny jest od systemu Windows 7.", "Jego głównym celem jest zachowanie kompatybilności ze starszymi aplikacjami."
+				],
+				"values": [true, true, false, false]
+			}, {
+				"question": "Wskaż prawidłowe zdania:",
+				"answers": [
+					"Każda próba modyfikacji ustawień mających wpływ na działanie systemu jest zgłaszana do UAC.", "Podstawowym zadaniem UAC, jest zmniejszenie pola ataku oraz pomoc w zapobieganiu i informowaniu nas o próbach nieautoryzowanych zmian w systemie, które bez naszej wiedzy mogłyby zostać wprowadzone przez wszelkiego rodzaju malware.", "Oprócz uprawnienia Zapisu potrzebne jest także uprawnienie Modyfikowania, aby zmieniać istniejące pliki i foldery.", "Korzystając z LUA możemy np. przejrzeć systemowego kalendarza, zmienić strefy czasowe."
+				],
+				"values": [true, true, false, false]
+			}, {
+				"question": "Elewacja uprawnień w systemie Windows7:",
+				"answers": [
+					"Jest udostępniana przez mechanizm UAC.", "Polega na chwilowym uzyskaniu pełni praw administratora przez ‘administratora’.", "Administrator chwilowo deleguje swoje uprawnienia na zwykłego użytkownika"
+				],
+				"values": [true, true, false]
+			}, {
+				"question": "Zaznacz wszystkie prawidłowe odpowiedzi dotyczące mechanizmu elewacji uprawnień w systemie Windows:",
+				"answers": [
+					"Został wprowadzony celem zwiększenia bezpieczeństwa przed złośliwym oprogramowaniem lub niekompetencją użytkowników.", "Polega na czasowym przydzieleniu uprawnień administratora do newralgicznych zasobów, podczas gdy wszyscy użytkownicy (nawet administratorzy) pracują w systemie jako zwykli użytkownicy.", "Blokuje i żąda potwierdzenia operacji przed wprowadzeniem zmian w newralgicznych zasobach systemu operacyjnego.", "Bazuje na zwirtualizowanych plikach i rejestrach systemu"
+				],
+				"values": [true, true, true, false]
+			}, {
+				"question": "Wskaż wszystkie poprawne odpowiedzi dotyczące uprawnień do plików w systemie Windows:",
+				"answers": [
+					"Uprawnienia jawne mają wyższy priorytet niż uprawnienia odziedziczone, nawet niż odziedziczone uprawnienia Odmów.", "Istnieją trzy możliwe stany uprawnienia: przyznany (allowed), nieprzyznany (denied) oraz zabroniony (undefined), z czego nieprzyznany ma wyższy priorytet nad przyznanym.", "Uprawnienia definiują możliwość podejmowania pewnych czynności w systemie operacyjnym np. tworzenie kopii zapasowych, instalacja oprogramowania.", "System plików NTFS oferuje mniejsze możliwości zarządzania dostępem do plików niż system plików FAT32."
+				],
+				"values": [true, true, false, false]
+			}, {
+				"question": "Po wykonaniu polecenia chmod 666 plik.txt, użytkownik nie będący właścicielem pliku plik.txt oraz nienależącym do tej samej grupy co grupa pliku, będzie miał:",
+				"answers": [
+					"Prawo do odczytu i zapisu dla pliku plik.txt.", "Prawo do odczytu, zapisu i wykonania dla pliku plik.txt.", "Tylko prawo do odczytu dla pliku plik.txt.", "Tylko prawo do zapisu dla pliku plik.txt."
+				],
+				"values": [true, false, false, false]
+			}, {
+				"question": "Zaznacz prawidłowe stwierdzenia na temat grup wbudowanych w systemie Windows:",
+				"answers": [
+					"Służą do nadawania praw użytkownikom w systemie.", "Zawierają m.in. grupę administratorów.", "Administrator może swobodnie dodawać nowe grupy wbudowane.", "Definiują domyślną strukturę organizacji zarządzania użytkownikami."
+				],
+				"values": [true, true, false, false]
+			}, {
+				"question": "W systemie Windows na dysku D (format plików NTFS) znajduje się katalog „zaproszenia”. Wewnątrz tego katalogu znajdują się dwa katalogi: „rodzina” oraz „znajomi”. Dla folderu „znajomi” został wyłączony mechanizm dziedziczenia uprawnień. Użytkownikowi Jan zostały zabronione wszystkie uprawnienia do folderu „zaproszenia”.",
+				"answers": [
+					"Użytkownik Jan może utworzyć nowy folder w folderze „znajomi”.", "Użytkownik Jan może przeglądać folder „rodzina”.", "Użytkownik Jan może przeglądać folder „zaproszenia”.", "System plików NTFS nie umożliwia stosowania uprawnień dla plików i folderów"
+				],
+				"values": [true, false, false, false]
+			}, {
+				"question": "W systemie Windows7 plik tekst1.txt, którego właścicielem jest użytkownik so1, ma następujące uprawnienia:<br />Typ | Nazwa | Uprawnienie<br />-------------+------------+--------------------<br />Odmów | grupa1 | Pełna kontrola<br />Zezwalaj | so1 | Odczyt danych<br />Zezwalaj | so2 | Odczyt danych<br />Użytkownik so1 należy do grupy grupa1.<br />Wskaż wszystkie poprawne odpowiedzi. Jeśli nie podano inaczej, odpowiedź zakłada niezmienność uprawnień do pliku tekst1.txt.",
+				"answers": [
+					"Użytkownik so1 może przyznać użytkownikowi so2 uprawnienia do usuwania tego pliku.", "Użytkownik so2 może odczytać zawartość tego pliku.", "Użytkownik so1 może zmienić właściciela tego pliku na użytkownika so2.", "Użytkownik so1 może odczytać zawartość tego pliku"
+				],
+				"values": [true, true, false, false]
+			}, {
+				"question": "Dla przykładowe pliku C:\\tajnyfolder\\plan.doc w systemie Windows7 dla systemu plików NTFS mamy następujące fragmenty listy ACL dla poszczególnych<br />użytkowników/grup i poziomów zagnieżdżenia:<br />Czesio Anusiak Óczniowie<br />Read Write Read Write Read Write<br />C:\\ Allow Allow -- -- Allow --<br />|_tajnyfolder\\ Allow -- -- Allow -- Deny<br />|_plan.doc Allow -- Allow Allow -- --<br />Użytkownicy Czesio I Anusiak należą do grupy Óczniowie, innych uprawnień w systemie nie zdefiniowano. Dziedziczenie jest włączone",
+				"answers": [
+					"Czesio może czytać i zapisać na dysku C.", "Czesio i Anusiak mogą odczytać plik plan.doc.", "Anusiak może czytać i zapisać a dysku C.", "Czesio i Anusiak mogą zapisać plik plan.doc"
+				],
+				"values": [true, true, false, false]
+			}, {
+				"question": "Pani Frał w pracowni komputerowej po zajęciach drugiej be w ramach porządków na dysku przenosi pliki należące do grupy Óczniowie (do której ma komplet uprawnień zapisu, odczytu i modyfikacji) do katalogów. Przeniosła z folderu c:\bałagan dwa pliki. Należący do Czesia chistoriazombiakow.pdf do folderu d:\\czesio (gdzie ma on pełen dostęp i jest właścicielem) oraz należący do Maślany plik jak_byc_mamoniarzem.pdf do folderu c:\\maslana (gdzie ma on pełen dostęp i jest właścicielem). Po zakończeniu tych operacji:",
+				"answers": [
+					"Pani Frał stanie się właścicielem pliku chistoriazombiaków.pdf.", "Maślana pozostanie właścicielem pliku jak_byc_mamoniarzem.pdf", "Czesio pozostanie właścicielem pliku chistoriazombiaków.pdf.", "Pani Frał stanie się właścicielem pliku jak_byc_mamoniarzem.pdf"
+				],
+				"values": [true, true, false, false]
+			}, {
+				"question": "Wskaż wszystkie poprawne odpowiedzi dotyczących kopii zapasowej plików w systemie Windows7:",
+				"answers": [
+					"Po skonfigurowaniu wykonywania kopii zapasowej system Windows śledzi zmiany i dodaje je do kopii zapasowej.", "Nie jest możliwe wykonanie kopii zapasowej do lokalizacji sieciowej.", "Kopie zapasowe można wykonywać tylko ręcznie.", "Domyślnie mechanizm kopii zapasowej jest włączony i obejmuje podstawowe foldery systemowe."
+				],
+				"values": [true, false, false, false]
+			}, {
+				"question": "Zaznacz wszystkie prawidłowe odpowiedzi dotyczące tworzenia kopii zapasowych plików w Windows7:",
+				"answers": [
+					"Domyślnie mechanizm nie jest skonfigurowany.", "Kopia może być zapisana na CD/DVD.", "Umożliwia wykonanie kopii plików danych użytkownika.", "Nie można ustalić harmonogramu automatycznego tworzenia kopii"
+				],
+				"values": [true, true, true, false]
+			}, {
+				"question": "Zaznacz wszystkie prawidłowe odpowiedzi dotyczące punktów przywracania w systemie Windows7:",
+				"answers": [
+					"Są tworzone przy ważnych zdarzeniach systemowych (np. Windows Update).", "Aby je utworzyć, ochrona systemu musi być włączona.", "Umożliwiają przywrócenie tylko całego systemu (bez możliwości wyboru pojedynczego pliku).", "Poprzednia wersja pliku pojawia się w zakładce „Poprzednie wersje” od razu po utworzeniu punktu (bez modyfikacji pliku)."
+				],
+				"values": [true, true, false, false]
+			}, {
+				"question": "Zaznacz wszystkie prawidłowe odpowiedzi dotyczące funkcji Ochrona systemu Windows7:",
+				"answers": [
+					"Można ją włączyć dla dysków niesystemowych.", "Zapisuje informacje o poprzednich wersjach zmodyfikowanych plików.", "Jest automatycznie włączona dla dysku systemowego.", "Wyłączenie Ochrony dla wybranego dysku NIE powoduje usunięcia utworzonych do tego momentu czasu punktów przywracania systemu"
+				],
+				"values": [true, true, true, false]
+			}, {
+				"question": "Zaznacz wszystkie prawidłowe odpowiedzi dotyczące odtwarzania plików i folderów w systemie Windows7 w zakładce „Poprzednie wersje”:",
+				"answers": [
+					"Odtwarzanie pliku za pomocą przycisku „Kopiuj” kopiuje plik do wybranej przez użytkownika lokalizacji.", "Odtwarzanie folderu z punktu przywracania systemu jest możliwe nawet jeśli usunie się go poprzez Shift+Del.", "Odtwarzanie folderu za pomocą przycisku „Kopiuj” do oryginalnej lokalizacji spowoduje natychmiastowe zastąpienie folderu o tej samej nazwie w tej lokalizacji (bez ostrzeżenia użytkownika).", "Poprzednią wersję pliku można otworzyć, skopiować lub przywrócić zarówno z kopii zapasowej jak i punktu przywracania systemu."
+				],
+				"values": [true, true, false, false]
+			}, {
+				"question": "Zaznacz wszystkie prawidłowe odpowiedzi dotyczące mechanizmu bibliotek w systemie Windows7.:",
+				"answers": [
+					"Domyślnym folderem zapisu jest pierwszy uwzględniony w bibliotece folder.", "Biblioteka nie jest folderem dyskowym.", "Biblioteki służą do zarządzania, organizowania danych z różnych lokalizacji.", "Biblioteka jest folderem dyskowym.", "Biblioteki nie są automatycznie indeksowane.", "Biblioteka może posiadać więcej niż jeden domyślny folder zapisu.", "Usunięcie pliku w bibliotece nie usuwa go z jego fizycznej lokalizacji.", "Usunięcie biblioteki powoduje usunięcie wszystkich plików w niej zawartych."
+				],
+				"values": [true, true, true, false, false, false, false, false]
+			}, {
+				"question": "Zaznacz wszystkie prawidłowe odpowiedzi dotyczące rejestru Windowsa7:",
+				"answers": [
+					"Przechowuje informacje konfiguracyjne systemu.", "Windows posiada wbudowany edytor rejestru regedit.exe.", "Jest składowany na dysku w postaci JEDNEGO pliku.", "Wszystkie klucze lub wartości zapisane w rejestrze są w postaci nieszyfrowanej."
+				],
+				"values": [true, true, false, false]
+			}]
+		}, {
+			"name": "Windows - Obsługa sieci",
+			"questions": [{
+				"question": "Administrator sieci komputerowej podał Ci następujący adres podsieci 165.144.26.24/29. Których adresów IP możesz użyć do podłączenia hostów do sieci?",
+				"answers": [
+					"165.144.26.30", "165.144.26.31", "165.144.26.32", "165.144.26.24"
+				],
+				"values": [true, false, false, false]
+			}, {
+				"question": "Administrator sieci komputerowej podał Ci następujący adres podsieci 165.144.26.16/29. Których adresów IP możesz użyć do podłączenia hostów do sieci?",
+				"answers": [
+					"żadnego z powyższych", "165.144.26.24", "165.144.26.30", "165.144.26.31", "165.144.26.32"
+				],
+				"values": [true, false, false, false, false]
+			}, {
+				"question": "Administrator sieci komputerowej podał Ci następujący adres podsieci 165.144.26.42/28. Ile maksymalnie hostów może być w takiej sieci?",
+				"answers": [
+					"administrator się pomylił i podał niepoprawne dane", "10", "14", "16"
+				],
+				"values": [true, false, false, false]
+			}, {
+				"question": "Administrator sieci komputerowej podał Ci następujący adres podsieci 165.144.26.40/27. Ile maksymalnie hostów może być w takiej sieci?",
+				"answers": [
+					"administrator się pomylił i podał niepoprawne dane", "2", "30", "32"
+				],
+				"values": [true, false, false, false]
+			}, {
+				"question": "Administrator sieci komputerowej podał Ci następujący adres podsieci 165.144.26.40/30. Ile maksymalnie hostów może być w takiej sieci?",
+				"answers": [
+					"2", "niepoprawna maska", "4", "6", "8"
+				],
+				"values": [true, false, false, false, false]
+			}, {
+				"question": "Dany jest adres podsieci: 192.168.100.64 o masce /27. Wskaż adresy należące do tej podsieci:",
+				"answers": [
+					"192.168.100.67", "192.168.100.90", "192.168.100.62", "192.168.100.98"
+				],
+				"values": [true, true, false, false]
+			}, {
+				"question": "Które stacje należą do tej samej podsieci co stacja 192.168.0.24, jeśli maska wygląda następująco 255.255.255.240?",
+				"answers": [
+					"192.168.0.19", "192.168.0.20", "192.168.0.29", "niepoprawna maska", "192.168.0.32", "192.168.0.39", "192.168.0.42", "192.168.0.49"
+				],
+				"values": [true, true, true, false, false, false, false, false]
+			}, {
+				"question": "Które stacje należą do tej samej podsieci co stacja 192.168.0.24, jeśli maska wygląda następująco 255.255.255.242?",
+				"answers": [
+					"niepoprawna maska", "192.168.0.19", "192.168.0.20", "192.168.0.32", "192.168.0.42"
+				],
+				"values": [true, false, false, false, false]
+			}, {
+				"question": "Które stacje należą do tej samej podsieci co stacja 192.168.0.157, jeśli maska wygląda następująco 255.255.255.224?",
+				"answers": [
+					"192.168.0.130", "192.168.0.139", "192.168.0.19", "192.168.0.160"
+				],
+				"values": [true, true, false, false]
+			}, {
+				"question": "Zaznacz poprawne maski sieci:",
+				"answers": [
+					"255.255.255.192", "255.255.255.224", "255.255.255.252", "255.255.255.242", "255.255.255.168"
+				],
+				"values": [true, true, true, false, false]
+			}, {
+				"question": "Wskaż wszystkie prawidłowe maski podsieci:",
+				"answers": [
+					"255.255.128.0", "11111111.11000000.00000000.00000000", "255.255.255.64", "11111111.11111111.00000000.11111111"
+				],
+				"values": [true, true, false, false]
+			}, {
+				"question": "Z okna właściwości protokołu TCP/IPv4 dla danej karty sieciowej w systemie Windows 7 można:",
+				"answers": [
+					"Skonfigurować używanie własnych serwerów DNS, pozostawiając jednocześnie automatyczną konfigurację adresu IP", "Skonfigurować jednocześnie wiele statycznych adresów IP", "Skonfigurować statyczny adres IP, pozostawiając jednocześnie automatyczną konfigurację serwerów DNS", "Skonfigurować i uruchomić lokalny serwer DHCP"
+				],
+				"values": [true, true, false, false]
+			}, {
+				"question": "Zaznacz poprawną postać minimalnej maski sieci dla podsieci zawierającej 11 stacji roboczych:",
+				"answers": [
+					"255.255.255.240", "wszystkie maski są niepoprawne", "255.255.255.224", "255.255.255.248", "255.255.255.252"
+				],
+				"values": [true, false, false, false]
+			}, {
+				"question": "Zaznacz poprawną postać minimalnej maski sieci dla podsieci zawierającej 9 stacji roboczych:",
+				"answers": [
+					"255.255.255.240", "wszystkie maski są niepoprawne", "255.255.255.224", "255.255.255.248", "255.255.255.252"
+				],
+				"values": [true, false, false, false, false]
+			}, {
+				"question": "W systemie Windows adres IP. Wskaż wszystkie poprawne odpowiedzi:",
+				"answers": [
+					"Może być więcej niż jeden adres IP przypisany do karty sieciowej", "Może zostać przypisany statycznie w ustawieniach karty sieciowej", "Uzyskany poprzez DHCP jest tylko na pewien wynegocjowany czas", "Może być identyczny jak inny komputer w danej podsieci z zachowaniem komunikacji"
+				],
+				"values": [true, true, true, false]
+			}, {
+				"question": "Zaznacz warstwy, które należą do modelu OSI:",
+				"answers": [
+					"Warstwa sesji", "Warstwa łączna danych", "Warstwa aplikacji", "Warstwa prezentacji"
+				],
+				"values": [true, true, true, true]
+			}, {
+				"question": "Wskaż poprawnie wyznaczone maski podsieci umożliwiające utworzenie podsieci składającej się z co najmniej 2 hostów:",
+				"answers": [
+					"255.255.255.128", "255.255.254.0", "255.254.255.0", "255.255.255.254"
+				],
+				"values": [true, true, false, false]
+			}, {
+				"question": "W systemie Windows polecenie ipconfig służy do:",
+				"answers": [
+					"Pobierania informacji o aktualnie przyznanym adresie", "Testowania serwerów DNS", "Zmiany maski podsieci", "Pobierania tablicy tras"
+				],
+				"values": [true, false, false, false]
+			}, {
+				"question": "Polecenie ipconfig:",
+				"answers": [
+					"Pozwala na zmianę wielu parametrów interfejsu sieciowego w jednym wywołaniu, np. adresu IP i maski podsieci.", "Pozwala zmienić statyczny adres IP danego interfejsu sieciowego, a zmiana ta będzie zapamiętana również przy następnym uruchomieniu systemu.", "Pozwala m.in. zmienić kolejność rozwiązywania nazw.", "Może być wykonywane wyłącznie przez użytkownika root."
+				],
+				"values": [true, false, false, false]
+			}, {
+				"question": "Każda z odpowiedzi składa się z czterech zestawów: adres IP1, adres IP2, maska. Wskaż te odpowiedzi, w których komputery mogą należeć do tej samej podsieci.",
+				"answers": [
+					"10.0.2.3, 10.0.170.4, 255.255.0.0", "10.0.0.20, 10.0.0.40, 255.255.255.0", "10.0.1.2, 10.0.3.5, 255.255.128.0", "10.0.0.5, 10.0.0.140, 255.255.255.128"
+				],
+				"values": [true, true, true, false]
+			}]
+		}, {
+			"name": "Windows - Usługi systemowe",
+			"questions": [{
+				"question": "Zaznacz wszystkie poprawne odpowiedzi dotyczące usług w systemie operacyjnym Windows 7:",
+				"answers": [
+					"Services.exe jest rodzicem dla procesów svchost.exe",
+					"Wiele usług startowanych jest w postaci osobnych wątków procesu svchost.exe",
+					"Standardowo svchost.exe pracuje w kontekście jednego z kont wbudowanych systemu Windows",
+					"LocalService, NetworkService oraz System to konta wbudowane wykorzystywane do zarządzania poziomem uprawnień usług systemowych",
+					"Wyłączenie niektórych usług może skończyć się uszkodzeniem systemu",
+					"Usługi to w praktyce, w większości biblioteki dll, ładowane przez Menedżera usług",
+					"Standardowo usługi przyporządkowane są (w zakresie uprawnień) do wbudowanych kont systemowych",
+					"Do zarządzania usługami można posłużyć się programem msconfig",
+					"Pomimo, że administrator może wystartować każdą usługę (po przeprowadzeniu odpowiednich kroków), może nie być w stanie jej później zatrzymać (chyba, że poprzez wyłączenie systemu)",
+					"Usługi nie posiadają GUI",
+					"Do zarządzania usługami można posłużyć się Menedżerem Zadań Windows, programem SC oraz odpowiednią konsolą MMC",
+					"Nie wszystkie usługi można zatrzymać lub wyłączyć przy użyciu standardowych narzędzi",
+					"Usługi mogą wykorzystywać (w zakresie uprawnień) konta systemowe dodane przez użytkownika",
+					"Każdą usługę można wystartować przy użyciu standardowych narzędzi do zarządzania usługami",
+					"Administrator ma uprawnienia do zatrzymywania dowolnych usług",
+					"Każdą usługę można wyłączyć przy użyciu standardowych narzędzi do zarządzania usługami",
+					"msconfig wyświetla listę wszystkich usług zainstalowanych w systemie",
+					"Usługi posiadają GUI, widoczne jako ikona w obszarze powiadomień",
+					"Usługi nie są separowane od użytkowników w tym znaczeniu, że użytkownik ma bezpośredni dostęp do GUI tworzonych przez usługi",
+					"Narzędzia Task Manager, SC oraz MMC posiadają taką samą funkcjonalność w zakresie zarządzania usługami"
+				],
+				"values": [true, true, true, true, true, true, true, true, true, true, true, true, true, true, false, false, false, false, false, false]
+			}, {
+				"question": "Wskaż wszystkie poprawne odpowiedzi dotyczące uruchamiania się usług w systemie Windows:",
+				"answers": [
+					"Usługa, której typ uruchamiania został skonfigurowany na wyłączony po ponownym uruchomieniu systemu operacyjnego nie może być w innym stanie, niż wyłączona",
+					"Wyróżniamy cztery typy uruchomienia usługi: Wyłączony, Automatyczny, Automatyczny z opóźnieniem oraz Ręczny",
+					"Usługa będąca skonfigurowana jako uruchamiana ręcznie zostanie włączona nawet w przypadku, gdy jest jedną z zależności usługi uruchamianej automatycznie",
+					"LocalService, NetworkDervice oraz System to konta wbudowane wykorzystywane do zarządzania poziomem uprawnień usług systemowych.",
+					"Usługa będąca skonfigurowana jako wyłączona zostanie włączona nawet w przypadku, gdy jest jedną z zależności usługi uruchamianej automatycznie",
+					"Wszystkie narzędzia dostępne dla użytkownika moją ten sam zakres możliwości.",
+					"Istnieje możliwość ‘zabijania’ _pojedynczych_ usług w systemie, wymagane jest jednak posiadanie uprawnień Administratora."
+				],
+				"values": [true, true, true, true, false, false, false]
+			}, {
+				"question": "Do zarządzania usługami w systemie Windows 7 służy:",
+				"answers": [
+					"Narzędzie SC",
+					"Narzędzie msconfig",
+					"Microsoft Management Console",
+					"Menedżer zadań",
+					"Wbudowany w system program dostępny z wiersza polecenia.",
+					"Narzędzie csrss"
+				],
+				"values": [true, true, true, true, true, false]
+			}, {
+				"question": "Zaznacz, które z czynności wykonywane są przez skrypt configure:",
+				"answers": [
+					"Sprawdzenie, czy w systemie są wszystkie składniki potrzebne do instalacji oprogramowania",
+					"Wygenerowanie pliku config.status",
+					"Instaluje program, kopiując skompilowane składniki aplikacji w odpowiednie miejsca w systemie plików",
+					"Uruchamienie kompilacji plików źródłowych"
+				],
+				"values": [true, true, false, false]
+			}, {
+				"question": "Wskaż wszystkie poprawne odpowiedzi dotyczące pracy procesów w tle:",
+				"answers": [
+					"Aby przywrócić proces działający w tle na ekran konsoli można użyć polecenia: fg numer",
+					"Aby wylistować procesy działające w tle można użyć polecenia jobs",
+					"Aby uruchomić proces działający w tle należy na końcu polecenia wstawić znak &",
+					"Aby przywrócić proces działający w tle na ekran konsoli można użyć polecenia: top numer"
+				],
+				"values": [true, true, true, false]
+			}]
+		}, {
+			"name": "Windows - Zdalny dostęp",
+			"questions": [{
+				"question": "Domyślnie w systemie Windows 7 w momencie podłączenia zdalnego pulpitu (Remote Desktop) lokalnie zalogowany użytkownik: ",
+				"answers": [
+					"Zostaje automatycznie wylogowany",
+					"Jest informowany o próbie podłączenia zdalnego pulpitu i pytany o zgodę",
+					"Może bez zmian kontynuować swoją pracę",
+					"Nie może w żaden sposób stwierdzić, że nastąpiło podłączenie pulpitu zdalnego"
+				],
+				"values": [true, false, false, false]
+			}, {
+				"question": "Proszę wskazać poprawne zdania dotyczące zdalnego połączenia za pomocą Remote Desktop Connection w systemie Windows 7: ",
+				"answers": [
+					"O1 Możliwe jest zablokowanie możliwości zdalnego połączenia z komputerem w jego ustawieniach systemu",
+					"O1 Narzędzie Remote Desktop pozwala na połączenie i zdalną pracę na komputerze w innej lokalizacji",
+					"O1 W ustawieniach systemu można wskazać którzy użytkownicy mają prawo do zdalnego połączenia *",
+					"O2 Możliwa jest konfiguracja zdalnego połączenia, w której można korzystać na zdalnym komputerze z lokalnych dysków",
+					"O4 Możliwa jest konfiguracja połączenia, w której można korzystać na zdalnym komputerze z lokalnego schowka",
+					"Możliwa jest konfiguracja zdalnego połączenia, w której można korzystać ze schowka kopiując dane między połączonymi komputerami",
+					"Możliwość zdalnego połączenia z komputerem może zostać zablokowana w jego ustawieniach systemu",
+					"Użytkownicy należący do grupy Administrators mają domyślnie prawo do zdalnego połączenia z komputerem, na którym zezwolono na takie połączenie",
+					"W ustawieniach systemu można wskazać którzy użytkownicy mają prawo do zdalnego połączenia *",
+					"O2 Remote Desktop Connection jest narzędziem pozwalającym na zarządzanie kilkoma zdalnymi połączeniami w jednym oknie aplikacji *",
+					"O2 Zdalne połączenie za pomocą Remote Desktop Connection możliwe jest tylko po otrzymaniu pliku zaproszenia od zdalnego komputera **",
+					"O3 Aby możliwe było zdalne połączenie do komputera musi on być uruchomiony w trybie „remote” ***",
+					"O3 Narzędzie Remote Desktop Connection pozwala jedynie na oglądanie pulpitu zdalnego komputera (nie umożliwia wykonania żadnej akcji na zdalnym komputerze) ****",
+					"Aby możliwe było zdalne połączenie do komputera musi on być uruchomiony w trybie „remote” ***",
+					"Narzędzie Remote Desktop Connection pozwala jedynie na oglądanie pulpitu zdalnego komputera (nie umożliwia wykonania żadnej akcji na zdalnym komputerze) ****",
+					"Remote Desktop Connection jest narzędziem pozwalającym na zarządzanie kilkoma zdalnymi połączeniami w jednym oknie aplikacji *",
+					"Wykonanie zdalnego połączenia za pomocą narzędzia Remote Desktop Connection nie zakłóca pracy użytkownikowi lokalnie pracującemu przy danym komputerze",
+					"Zdalne połączenie za pomocą Remote Desktop Connection możliwe jest tylko po otrzymaniu pliku zaproszenia do zdalnego komputera **",
+					"Zdalne połączenie za pomocą Remote Desktop Connection możliwe jest tylko za zgodą użytkownika pracującego na komputerze, do którego się łączymy"
+				],
+				"values": [true, true, true, true, true, true, true, true, true, false, false, false, false, false, false, false, false, false, false]
+			}, {
+				"question": "Proszę wskazać poprawne zdania dotyczące zdalnej pomocy (Remote Assistance) w systemie Windows 7: ",
+				"answers": [
+					"O1 Możliwe jest zablokowanie możliwości przyjęcia zdalnej pomocy w ustawieniach systemu * ",
+					"O1 Zaproszenie wygenerowane w celu uzyskania zdalnej pomocy zawsze jest zabezpieczone hasłem **",
+					"O3 Możliwe jest zablokowanie możliwości przyjęcia zdalnej pomocy w ustawieniach systemu *",
+					"Możliwe jest zablokowanie możliwości przyjęcia zdalnej pomocy w ustawieniach systemu * ",
+					"Możliwe jest zablokowanie w ustawieniach systemu możliwości przejęcia kontroli nad komputerem, któremu udzielana jest zdalna pomoc",
+					"Przebieg sesji zdalnej pomocy jest domyślnie zapisywany w pliku log ",
+					"Przejęcie kontroli nad komputerem, któremu udzielana jest zdalna pomoc jest możliwe tylko po wyrażeniu na to zgody przez użytkownika, któremu pomoc jest udzielana ",
+					"Zaproszenie wygenerowane w celu uzyskania zdalnej pomocy zawsze jest zabezpieczone hasłem **",
+					"Zdalna pomoc może zostać uzyskana uruchamiając z linii poleceń narzędzie msra.exe ",
+					"O2 Narzędzie Remote Assistance pozwala na komunikację głosową między zdalnymi komputerami *",
+					"O2 Przejęcie kontroli nad komputerem, któremu udzielana jest zdalna pomoc wiąże się z wylogowaniem jego użytkownika **",
+					"O3 Zaproszenie wygenerowane w celu uzyskania zdalnej pomocy może być niezabezpieczone hasłem",
+					"Narzędzie Remote Assistance pozwala na komunikację głosową między zdalnymi komputerami *",
+					"Narzędzie Remote Assistance pozwala na komunikację wideo między zdalnymi komputerami",
+					"Nawiązanie połączenia zdalnej pomocy wiąże się z wylogowaniem aktualnie pracujące na komputerze użytkownika",
+					"Przejęcie kontroli nad komputerem, któremu udzielana jest zdalna pomoc wiąże się z wylogowaniem jego użytkownika **",
+					"Wspólną kontrolę na komputerem może zakończyć jedynie użytkownik udzielający pomocy",
+					"Zabezpieczenie hasłem zaproszenia do zdalnej pomocy jest opcjonalne i może zostać skonfigurowane we właściwościach Remote Assistance"
+				],
+				"values": [true, true, true, true, true, true, true, true, true, false, false, false, false, false, false, false, false, false]
+			}, {
+				"question": "Remote Desktop w systemie Windows 7: ",
+				"answers": [
+					"Pozwala na korzystanie ze schowka pomiędzy zdalnie połączonymi komputeram",
+					"Umożliwia dostęp do zasobów zdalnego komputera ",
+					"Umożliwia zdalne połączenia z komputere",
+					"Wykorzystuje sieć lokalną lub Internet "
+				],
+				"values": [true, true, true, true]
+			}]
+		}, {
+			"name": "Linux - Instalacja i podstawy konfiguracji",
+			"questions": [{
+				"question": "Partycja SWAP w systemie Linux:",
+				"answers": [
+					"Jest używana gdy zaczyna brakować w systemie wolnej pamięci RAM", "Jest niezbędna do poprawnego działania systemu", "Służy do przechowywania osobistych plików użytkowników", "Musi mieć rozmiar dokładnie dwa razy większy od pamięci RAM zainstalowanej na komputerze"
+				],
+				"values": [true, false, false, false]
+			}, {
+				"question": "Zaznacz poprawne odpowiedzi dotyczące FHS w Linux Debian:",
+				"answers": [
+					"/etc – to katalog zawierający pliki konfiguracyjne systemu operacyjnego oraz pliki konfiguracyjne ważniejszych programów zainstalowanych w systemie", "/home – to katalog zawierający katalogi domowe użytkowników", "/proc – katalog będący wirtualnym obrazem działającego systemu", "/bin – to katalog zawierający jądro systemu oraz programy i pliki związane z uruchamianiem systemu operacyjnego", "/dev – to katalog będący wirtualnym obrazem działającego systemu", "/var – to katalog, który zawiera urządzenia, które mogą (lub są) dostępne w systemie Linux"
+				],
+				"values": [true, true, true, false, false, false]
+			}, {
+				"question": "Zgodnie ze standardem Filesystem Hierarchy Standard (FHS):",
+				"answers": [
+					"W katalogu /etc powinny znajdować się pliki konfiguracyjne, ważniejszych usług systemowych.", "W katalogu /proc jest zamontowany wirtualny system plików, który udostępnia informacje o działającym systemie.", "Katalog /root jest katalogiem nadrzędnym dla wszystkich innych katalogów.", "Katalog /usr jest katalogiem, w którym użytkownicy zapisują swoje własne pliki."
+				],
+				"values": [true, true, false, false]
+			}, {
+				"question": "Plik /etc/fstab ma następującą postać:<br />/dev/hda3/ext3 defaults 0 0<br />/dev/hda2/home ext4 defaults 0 0<br />/dev/hdb1/windows vfat noauto 0 0<br />Prawdą jest, że:",
+				"answers": [
+					"/usr/bin jest przechowywany na innym dysku niż folder zawierający pliki domowe użytkowników", "Na pierwszym dysku są conajmniej 3 partycje", "Partycja z systemem Windows zostanie zamontowana automatycznie przy starcie systemu", "Przy formatowaniu partycji z systemem stracimy dane użytkownika"
+				],
+				"values": [true, true, false, false]
+			}, {
+				"question": "Wskaż wszystkie poprawne ścieżki do katalogu domowego użytkownika root:",
+				"answers": [
+					"/root", "/usr/root", "/home/root", "Użytkownik root nie posiada katalogu domowego"
+				],
+				"values": [true, false, false, false]
+			}, {
+				"question": "Zaznacz prawidłowe odpowiedzi dotyczące polecenia init oraz jego parametrów:",
+				"answers": [
+					"init 6 – restart system", "init 3 – uruchomienie systemu w tzw. 3-cim poziomie uruchomieniowym", "init 1 – wyłączenie systemu", "init 0 – restart systemu"
+				],
+				"values": [true, true, false, false]
+			}, {
+				"question": "Wskaż, które pliki reprezentują dyski lub partycje na kontrolerze SATA w systemie Ubuntu/Debian:",
+				"answers": [
+					"/dev/sdb", "/dev/sda1", "/dev/hda1", "/dev/fd0"
+				],
+				"values": [true, true, false, false]
+			}, {
+				"question": "Wskaż wszystkie poprawne odpowiedzi dotyczące organizacji systemu plików w systemie Linux:",
+				"answers": [
+					"W katalogu /boot znajdują pliki jądra systemu.", "W katalogu /dev fizyczne urządzenia reprezentowane są jako pliki.", "Katalog /home to katalog domowy konkretnego użytkownika.", "Katalog /usr to katalog domowy konkretnego użytkownika."
+				],
+				"values": [true, true, false, false]
+			}, {
+				"question": "Dany jest komputer z dwoma dyskami po 200GB, oraz z 4GB pamięci RAM. Na pierwszym podpiętym do kontrolera SATA dysku zainstalowano system operacyjny Windows, oraz jedną z partycji drugiego dysku przeznaczono na dane dla systemu Windows. Dodatkowo, na drugim dysku zostanie zainstalowany system operacyjny Linux Ubuntu. W trakcie instalacji Linux-a zdaniem administratora jest podział dysku na partycje w taki sposób, aby utworzyć partycję, do której będzie dostęp z obydwu systemów operacyjnych bez konieczności instalacji narzędzi firm trzecich. Spośród wymienionych, zaznacz poprawne konfiguracje dotyczące drugiego dysku. Weź pod uwagę aktualne zalecenia dotyczące rozmiaru pamięci swap.<br />Device Type Mount Point Size",
+				"answers": [
+					"/dev/sdb1 reiserFS / 50000 MB<br />/dev/sdb2 reiserFS /home 98000 MB<br />/dev/sdb3 fat32 /home/wymiana 50000 MB<br />/dev/sdb4 swap 2000 MB", "/dev/sdb1 ext4 / 90000 MB<br />/dev/sdb2 fat32 /mnt/windows 90000 MB<br />/dev/sdb3 swap 20000 MB", "/dev/sdb1 ext4 / 100000 MB<br />/dev/sdb2 reiserFS /mnt/windows 98000 MB<br />/dev/sdb3 swap 2000 MB", "/dev/sda ext4 / 100000 MB<br />/dev/sdb fat32 /mnt/windows 98000 MB<br />/dev/sdc swap 2000 MB"
+				],
+				"values": [true, false, false, false]
+			}, {
+				"question": "W systemie Linux polecenie kill:",
+				"answers": [
+					"Wysyła sygnał do procesu.", "Wywołanie polecenia z PIDem procesu spowoduje wysłanie sygnału TERM do procesu.", "Wywołanie polecenia z jakimkolwiek przełącznikiem spowoduje zamknięcie wskazanego procesu.", "Wylogowanie wszystkich użytkowników danego komputera."
+				],
+				"values": [true, true, false, false]
+			}, {
+				"question": "Dostępny jest komputer z dwoma dyskami po 200GB, oraz z 4GB pamięci RAM. Na pierwszym podpiętym do kontrolera SATA dysku zainstalowano system operacyjny Windows, a jedną partycję z drugiego dysku przeznaczono również dla systemu Windows. Dodatkowo, na drugim dysku zostanie zainstalowany system operacyjny LinuxUbuntu. W trakcie instalacji Linux-a zdaniem administratora jest podział dysku na partycje w taki sposób, aby utworzyć partycję, do której będzie dostęp z obydwusystemów operacyjnych bez konieczności instalacji narzędzi firm trzecich. Zaznacz, które konfiguracje dla drugiego dysku spośród wymienionych poniżej są poprawne. Weź pod uwagę aktualne zalecenia dotyczące rozmiaru pamięci swap.<br />Device Type Mount Point Size",
+				"answers": [
+					"/dev/sdb1 ext4 / 100000 MB<br />/dev/sdb2 fat32 /home/wymiana 98000 MB<br />/dev/sdb3 swap 2000 MB", "/dev/sdb1 ext4 /home 198000 MB<br />/dev/sdb2 swap 2000 MB", "/dev/sdb1 ext4 / 100000 MB<br />/dev/sdb2 reiserfs /home/wymiana 98000 MB<br />/dev/sdb3 swap 2000 MB", "/dev/sda ext4 / 100000 MB<br />/dev/sdb fat32 /home/wymiana 98000 MB<br />/dev/sdc swap 2000 MB"
+				],
+				"values": [true, false, false, false]
+			}, {
+				"question": "Które polecenia umożliwią zmianę hasła w systemie Linux Debian:",
+				"answers": [
+					"vi /etc/shadow", "passwd", "chpasswd", "shadow"
+				],
+				"values": [true, true, false, false]
+			}, {
+				"question": "Do zainstalowania nowego pakietu oprogramowania w systemie Linux Ubuntu można użyć programu:",
+				"answers": [
+					"apt-get", "aptitude", "dpkg", "synaptic"
+				],
+				"values": [true, true, true, true]
+			}, {
+				"question": "Zaznacz wszystkie prawidłowe odpowiedzi dotyczące procesu init w systemie Linux:",
+				"answers": [
+					"Jest to proces rodzic wszystkich procesów.", "Jest to proces, który działa jedynie w momencie uruchamiania systemu.", "Identyfikator PID tego procesu jest zawsze równy 0.", "Nie ma takiego procesu w systemie Linux"
+				],
+				"values": [true, false, false, false]
+			}, {
+				"question": "Poniżej przedstawiono wynik polecenia ls -l wydanego przez użytkownika test, który jest administratorem systemu.<br />-r—r—r—l test test 0 2008-01-03 14:57 444.cpp<br />-rw-rw-r—l test test 0 2008-01-03 14:56 123.c<br />Następnie użytkownik test wykonał polecenie sudo chown sol 444.cpp<br />Wybierz jedną lub więcej:",
+				"answers": [
+					"Po wykonaniu polecenia grupa właściciela pliku będzie ustawiona na test.", "Po wykonaniu polecenia uprawnienia pliku nie zmienią się.", "Po wykonaniu polecenia właścicielem pliku będzie użytkownik test.", "Wykonanie polecenia się nie powiedzie."
+				],
+				"values": [true, true, false, false]
+			}, {
+				"question": "Zaznacz, które z czynności wykonywane są przez skrypt configure:",
+				"answers": [
+					"Wygenerowanie pliku config.status.", "Sprawdzenie, czy w systemie są wszystkie składniki potrzebne do instalacji oprogramowania.", "Uruchamianie kompilacji plików źródłowych.", "Instaluje program, kopiując skompilowane składniki aplikacji w odpowiednie miejsca w systemie plików."
+				],
+				"values": [true, true, false, false]
+			}, {
+				"question": "W systemie Ubuntu plik, który zawiera listę użytkowników systemu i ich identyfikator UID to:",
+				"answers": [
+					"/etc/passwd", "/etc/shadow", "/dev/users", "/usr/bin/passwd"
+				],
+				"values": [true, false, false, false]
+			}, {
+				"question": "W systemie Debian/Ubuntu plik /bin/passwd:",
+				"answers": [
+					"Jest dostępny do wykonania dla wszystkich użytkowników.", "Służy do zmiany hasła użytkownika.", "Służy do tworzenia nowych kont użytkowników.", "Zawiera nazwy i UID użytkowników systemu."
+				],
+				"values": [true, true, false, false]
+			}, {
+				"question": "Aby zapisać aktualną datę do pliku tekstowego o nazwie date należy wydać polecenie:",
+				"answers": [
+					"O2 date > date", "O3 time >> date", "O4 time-date > date", "O1 time > date"
+				],
+				"values": [true, false, false, false]
+			}, {
+				"question": "Aby wyświetlić pliki tylko o rozszerzeniach jpeg i jpg należy użyć polecenia:",
+				"answers": [
+					"ls *.jpg; ls *.jpeg", "ls *.{jpg,jpeg}", "ls *.j?pg"
+				],
+				"values": [true, true, false]
+			}]
+		},
+		{
+			"name": "Linux - UGP",
+			"questions": [
+                {
+    				"question": "Poniżej przedstawiono wynik polecenia ls –l wydanego przez użytkownika test, który jest administratorem systemu<br/> - -w- -w-rw- 1 test test 0 2008-01-03 14:57 111.cpp<br/> -rw-r-xr- - 1 test test 0 2008-01-03 14:56 111.c Następnie użytkownik test wykonał polecenie sudo chmod q+r 111.cpp.",
+    				"answers": [
+                        "Po wykonaniu polecenia uprawnienia do pliku 111.cpp będą równe 266",
+                        "Po wykonaniu polecenia użytkownik test będzie miał prawo zapisu i odczytu do pliku 111.cpp",
+                        "Po wykonaniu polecenia uprawnienia pliku nie zmienią się",
+                        "Wykonanie polecenia się nie powiedzie"
+                    ],
+    				"values": [true, true, false, false]
+    			},
+                {
+    				"question": "Poniżej przedstawiono wynik polecenia ls –l wydanego przez użytkownika test, który jest administratorem systemu<br/> - r-xr-xr-x 1 test test 0 2008-01-03 14:57 444.cpp<br/> -rw-rw-rw- 1 test test 0 2008-01-03 14:56 123.c Następnie użytkownik test wykonał polecenie sudo chmod o+w 444.cpp.",
+    				"answers": [
+                        "Po wykonaniu użytkownicy inni niż właściciel i grupa właściciela pliku będzie miała prawa zapisu",
+                        "Po wykonaniu polecenia właścicielem pliku będzie użytkownik sudo",
+                        "Polecenie jest tożsame z poleceniem sudo chmod 667 444.cpp",
+                        "Wykonanie polecenia się nie powiedzie"
+                    ],
+    				"values": [true, false, false, false]
+    			},
+                {
+    				"question": "Poniżej przedstawiono wynik polecenia ls –l wydanego przez użytkownika test, który jest administratorem systemu<br/> - - - - - - - - - - 1 test test 0 2008-01-03 14:57 111.cpp<br/> -rw-r- -r- - 1 test test 0 2008-01-03 14:56 111.c Następnie użytkownik test wykonał polecenie sudo chmod a+w 111.c.",
+    				"answers": [
+                        "Po wykonaniu polecenia właścicielem pliku będzie użytkownik test",
+                        "Po wykonaniu polecenia właściciel pliku będzie miał prawo uruchamiania pliku 111.c",
+                        "Po wykonaniu polecenia uprawnienia pliku nie zmienią się",
+                        "Wykonanie polecenia się nie powiedzie"
+                    ],
+    				"values": [true, false, false, false]
+    			},
+                {
+    				"question": "Poniżej przedstawiono wynik polecenia ls –l wydanego przez użytkownika test, który jest administratorem systemu<br/> -r-xr-xr-x 1 test test 0 2008-01-03 14:57 444.cpp<br/> -r- -r- - - -x 1 test test 0 2008-01-03 14:56 123.c Następnie użytkownik test wykonał polecenie sudo chown so1:so1 123.c.",
+    				"answers": [
+                        "Po wykonaniu polecenia właścicielem pliku 123.c będzie użytkownik so1",
+                        "Po wykonaniu polecenia grupą właściciela pliku 123.c będzie grupa test",
+                        "Po wykonaniu polecenie uprawnienia pliku 123.c będą równe 411",
+                        "Wykonanie polecenia się nie powiedzie"
+                    ],
+    				"values": [true, false, false, false]
+    			},
+                {
+    				"question": "Poniżej przedstawiono wynik polecenia ls –l wydanego przez użytkownika test, który jest administratorem systemu<br/> - r- -r- -r- - 1 test test 0 2008-01-03 14:57 444.cpp<br/> -rw-rw-r- - 1 test test 0 2008-01-03 14:56 123.c Następnie użytkownik test wykonał polecenie sudo chown so1 444.cpp.",
+    				"answers": [
+                        "Po wykonaniu polecenie grupa właściciela pliku będzie ustawiona na test",
+                        "Po wykonaniu polecenia uprawnienia pliku nie zmienią się",
+                        "Po wykonaniu polecenie właścicielem pliku będzie użytkownik test",
+                        "Wykonanie polecenia się nie powiedzie"
+                    ],
+    				"values": [true, true, false, false]
+    			},
+                {
+    				"question": "W systemie Ubuntu jesteś zalogowany jako użytkownik gosc należący do grupy sysop. Poniżej przedstawiono wynik polecenia ls –1 wykonanego w katalogu /comp<br/> dr-xr-xr-x 2 sysop sysop 4096 Jan 30 2008 strona.www<br/> -rw-r- -r - -3 sysop sysop 6480 Jan 30 2008 jazda.html<br/> -rw-rwxrwx 3 sysop sysop 9414 Jan 30 2008 licznik.sh<br/> Zaznacz wszystkie prawidłowe stwierdzenia dotyczące powyższych plików:",
+    				"answers": [
+                        "Masz prawo odczytu pliku jazda.html",
+                        "Możesz uruchomić skrypt licznik.sh",
+                        "Możesz tworzyć nowe pliki w katalogu strona.www",
+                        "strona.www nie jest katalogiem"
+                    ],
+    				"values": [true, true, false, false]
+    			},
+                {
+    				"question": "Dany jest wynik polecenia ls –l wykonanego przez użytkownika Jan:<br/> -rwxrwxr- - 2 jan students 4096 sty 21 06:59 odp.txt",
+    				"answers": [
+                        "Właściciel posiada wszystkie prawa do tego pliku",
+                        "Wszyscy użytkownicy i grupy mają prawo do odczytania tego pliku",
+                        "Użytkownicy spoza grupy students mają prawo usunąć ten plik",
+                        "Członkowie grupy students NIE mają prawa do wykonywania tego pliku"
+                    ],
+    				"values": [true, true, false, false]
+    			},
+                {
+    				"question": "Jaki będzie skutek wykonania polecenia: $ chmod a+rx plik.txt <br/> Przez administratora w systemie Ubuntu/Debian?",
+    				"answers": [
+                        "Wszyscy użytkownicy będą mieli prawo do odczytu oraz wykonywania tego pliku",
+                        "Wszyscy użytkownicy będą mieli prawo do zapisu tego pliku",
+                        "Wszystkim użytkownikom zostanie odebrane prawo do otwierania tego pliku",
+                        "Tylko administrator będzie miał możliwość odczytania tego pliku"
+                    ],
+    				"values": [true, false, false, false]
+    			},
+                {
+    				"question": "W systemie Ubuntu/Debian nowego użytkownika tworzymy:",
+    				"answers": [
+                        "Edytując plik /etc/passwd",
+                        "Korzystając z polecenia „adduser”",
+                        "Korzystając z polecenia „useradd”",
+                        "Edytując plik /etc/sudoers"
+                    ],
+    				"values": [true, true, true, false]
+    			},
+                {
+    				"question": "W systemie Ubuntu plik, który zawiera listę użytkowników systemu i ich identyfikator UID to",
+    				"answers": [
+                        "/etc/passwd",
+                        "/etc/shadow",
+                        "/dev/users",
+                        "/usr/bin/passwd"
+                    ],
+    				"values": [true, false, false, false]
+    			},
+                {
+    				"question": "W systemie Ubuntu/Debian polecenie chown",
+    				"answers": [
+                        "Pozwala zmienić grupę właściciela pliku",
+                        "Pozwala zmienić właściciela pliku.",
+                        "Pozwala sprawdzić zawartość pliku.",
+                        "Pozwala ustawić hasło do pliku.",
+                        "Pozwala zmienić hasło użytkownika",
+                        "Pozwala zmienić maskę",
+                        "Pozwala zmienić uprawnienia pliku"
+                    ],
+    				"values": [true, true, false, false, false, false, false]
+    			},
+                {
+    				"question": "W systemie Debian/Ubuntu plik /bin/passwd:",
+    				"answers": [
+                        "Jest dostępny do wykonania dla wszystkich użytkowników",
+                        "Służy do zmiany hasła użytkownika",
+                        "Służy do tworzenia nowych kont użytkowników",
+                        "Zawiera nazwy i UID użytkowników systemu"
+                    ],
+    				"values": [true, true, false, false]
+    			},
+                {
+    				"question": "W systemie Debian/Ubuntu plik /etc/shadow:",
+    				"answers": [
+                        "Zawiera zakodowane (hashowane) hasła",
+                        "Zawiera hasła użytkowników zapisane w plain.text",
+                        "Jest dostępny do zapisu i odczytu dla wszystkich użytkowników",
+                        "Edytuje się poleceniem vipw"
+                    ],
+    				"values": [true, false, false, false]
+    			},
+                {
+    				"question": "Jakie informacje przechowuje plik /etc/passwd w najnowszych dystrybucjach systemu Linux:",
+    				"answers": [
+                        "Informacje o używanej przez użytkownika powłoce",
+                        "Datę utworzenia konta",
+                        "Informacje o rozmieszczeniu ikon na pulpicie",
+                        "Zaszyfrowane hasło użytkownika"
+                    ],
+    				"values": [true, false, false, false]
+    			},
+                {
+    				"question": "Które polecenia umożliwią zmianę hasła w systemie Linux Debian:",
+    				"answers": [
+                        "vi /etc/shadow",
+                        "passwd",
+                        "chpasswd",
+                        "shadow"
+                    ],
+    				"values": [true, true, false, false]
+    			},
+                {
+    				"question": "Które polecenia umożliwią zmianę hasła w systemie Ubuntu:",
+    				"answers": [
+                        "vi /etc/shadow",
+                        "passwd",
+                        "chpasswd",
+                        "shadow"
+                    ],
+    				"values": [true, false, false, false]
+    			},
+                {
+    				"question": "Po wykonaniu polecenia chmod 666 plik.txt, użytkownik nie będący właścicielem pliku plik.txt oraz nienależący do tej samej grupy co grupa pliku, będzie miał:",
+    				"answers": [
+                        "Prawo do odczytu i zapisu dla pliku plik.txt",
+                        "Prawo do odczytu, zapisu i wykonania dla pliku plik.txt",
+                        "Tylko prawo do odczytu dla pliku plik.txt",
+                        "Tylko prawo do zapisu dla pliku plik.txt"
+                    ],
+    				"values": [true, false, false, false]
+    			}
+            ]
+		}, {
+			"name": "Linux - Procesy",
+			"questions": [{
+				"question": "W systemie Ubuntu/Debian plik /etc/rc.local:",
+				"answers": [
+					"Jest skryptem uruchamianym podczas startu systemu ",
+					"Jest uruchamiany przez demona Upstart init ",
+					"Jest skompilowanym plikiem binarnym uruchamianym podczas startu systemu ",
+					"Jest uruchamiany jako pierwszy ze wszystkich skryptów podczas startu systemu "
+				],
+				"values": [true, true, false, false]
+			}, {
+				"question": "W systemie Linux polecenie kill: ",
+				"answers": [
+					"Służy do wysyłania sygnałów do określonego procesu",
+					"Wysyła sygnał do procesu",
+					"Wywołanie polecenia z PIDem procesu spowoduje wysłanie sygnału TERM do procesu",
+					"Może być wywołane tylko z uprawnieniami administratora (poprzedzone słowem „sudo”)",
+					"Powoduje zamknięcie systemu",
+					"Służy jedynie do zabijania wyznaczonych procesów",
+					"Wylogowuje wszystkich użytkowników danego komputera",
+					"Wywołanie polecenia z jakimkolwiek przełącznikiem spowoduje zamknięcie wskazanego procesu",
+					"Zabija wszystkich użytkowników danego komputera"
+				],
+				"values": [true, true, true, false, false, false, false, false, false]
+			}, {
+				"question": "Wskaż wszystkie poprawne odpowiedzi dotyczące poleceń kill oraz killall:",
+				"answers": [
+					"Polecenie kill jako parametr przyjmuje PID procesu, a killall nazwę programu/programów",
+					"Używając obu poleceń można poddać ich działaniom kilka procesów na raz",
+					"Za pomocą polecenia kill można wydawać różne sygnały do procesów",
+					"Polecenie kill „zabija” wskazany proces, a killall wysyła sygnał Terminate do wszystkich procesów o podanej nazwie"
+				],
+				"values": [true, true, true, false]
+			}, {
+				"question": "Zaznacz prawidłowe odpowiedzi dotyczące procesu init w systemie Linux:",
+				"answers": [
+					"Identyfikator PID tego procesu jest zawsze równy 1",
+					"Jest to proces nadrzędny dla wszystkich procesów działających w systemie.",
+					"Jest to proces rodzic wszystkich procesów",
+					"Identyfikator PID tego procesu jest zawsze równy -1",
+					"Identyfikator PID tego procesu jest zawsze równy 0",
+					"Jest to proces, który działa jedynie w momencie uruchamiania systemu",
+					"Jest to proces, który działa jedynie w momencie uruchamiania usług systemowych",
+					"Nie ma takiego procesu w systemie Linux",
+					"Proces ten jest zabijany po zakończeniu uruchamiania systemu.",
+					"Proces ten jest zatrzymywany po zakończeniu uruchamiania systemu."
+				],
+				"values": [true, true, true, false, false, false, false, false, false, false]
+			}, {
+				"question": "W systemie Linux wykonywanie procesu można zatrzymać (ale nie zakończyć) poprzez",
+				"answers": [
+					"Wciśnięcie kombinacji klawiszy Ctrl+Z w terminalu, podczas gdy proces działa w trybie interaktywnym",
+					"Wykonanie polecenia „kill –s STOP”",
+					"Wciśnięcie kombinacji klawiszy Ctrl+C w terminalu, podczas gdy proces działa w trybie interaktywnym",
+					"Wykonanie polecenia „signal –s STOP”"
+				],
+				"values": [true, true, false, false]
+			}, {
+				"question": "W systemie Ubuntu/Debian został utworzony skrypt „licznik.sh” z uprawnieniami do wykonywania. Następnie w konsoli zostało wywołane następujące polecenie:  ./licznik.sh &  ",
+				"answers": [
+					"Skrypt zostanie uruchomiony w tle i będzie figurował na liście zadań (jobs) jako pracujący (running",
+					"W konsoli będzie można wydawać kolejne polecenia ",
+					"Skrypt zostanie uruchomiony w tle i będzie figurował na liście zadań (jobs) jako wstrzymany (stopped)  ",
+					"Wykonanie polecenia nie powiedzie się"
+				],
+				"values": [true, true, false, false]
+			}, {
+				"question": "Użytkownik zalogował się do systemu Debian, uruchomił konsolę tekstową i z konsoli uruchomił skrypt licznik.sh w następujący sposób  ./licznik.sh &",
+				"answers": [
+					"Proces pracuje w tle",
+					"Proces zostanie zakończony w momencie wylogowania się użytkownika",
+					"Proces zostanie zakończony w momencie zamknięcia konsoli tekstowej",
+					"Wysłanie sygnału SIGSTOP spowoduje zatrzymanie procesu",
+					"Jeżeli użytkownik zamknie konsolę i wyloguje się, to proces będzie działał do momentu zamknięcia systemu",
+					"Jeżeli użytkownik zamknie konsolę, to proces będzie działał do momentu zamknięcia systemu",
+					"Proces zostanie zakończony w momencie naciśnięcia kombinacji klawiszy Ctrl+Z",
+					"Wysłanie sygnału SIGTERM spowoduje zatrzymanie procesu"
+				],
+				"values": [true, true, true, true, false, false, false, false]
+			}, {
+				"question": "Użytkownik zalogował się do systemu Debian, uruchomił konsolę tekstową i z konsoli uruchomił skrypt licznik.sh w następujący sposób  screen ./licznik.sh ",
+				"answers": [
+					"Jeżeli użytkownik wyloguje się z systemu bez zamykania konsoli, to proces będzie działał do momentu zamknięcia systemu ",
+					"Jeżeli użytkownik zamknie konsolę i wyloguje się z systemu, to proces będzie działał do momentu zamknięcia systemu ",
+					"Proces zostanie zakończony w momencie wylogowania się użytkownika",
+					"Proces zostanie zakończony w momencie zamknięcia konsoli tekstowej"
+				],
+				"values": [true, true, false, false]
+			}, {
+				"question": "Użytkownik zalogował się do systemu Debian, uruchomił konsolę tekstową i z konsoli uruchomił skrypt licznik.sh w następujący sposób  ./licznik.sh  ",
+				"answers": [
+					"Po wysłaniu do tego procesu sygnału SIGCONT proces wznowi działanie, jeżeli wcześniej był zatrzymany",
+					"Po wysłaniu do tego procesu sygnału SIGSTOP proces się zatrzyma",
+					"Po wysłaniu do tego procesu sygnału SIGTERM proces się zakończy",
+					"Po wysłaniu do tego procesu sygnału SIGCONT proces uruchomi wewnętrzny licznik komend",
+					"Po wysłaniu do tego procesu sygnału SIGSTOP proces się zakończy",
+					"Po wysłaniu do tego procesu sygnału SIGTERM nic się nie stanie",
+					"Po wysłaniu do tego procesu sygnału SIGTERM proces się zatrzyma",
+					"Po wysłaniu do tego procesu sygnału SIGTERM proces uruchomi terminal",
+					"Proces nie będzie reagował na żadne sygnały do niego wysyłane",
+					"Proces zakończy się tylko jeżeli otrzyma sygnał SIGKILL"
+				],
+				"values": [true, true, true, false, false, false, false, false, false, false]
+			}, {
+				"question": "Użytkownik zalogował się do systemu Debian, uruchomił konsolę tekstową i z konsoli uruchomił skrypt licznik.sh w następujący sposób  ./licznik.sh &  Co sprawi wywołanie polecenia fg 1? ",
+				"answers": [
+					"Proces otrzyma sygnał CONT",
+					"Proces zostanie przywrócony do pierwszego planu",
+					"Proces otrzyma sygnał STOP",
+					"Proces zakończy się",
+					"Proces zatrzyma się",
+					"Proces zostanie przeniesiony do tła"
+				],
+				"values": [true, true, false, false, false, false]
+			}]
+		}, {
+			"name": "Linux - Sieci",
+			"questions": [{
+				"question": "asdasd",
+				"answers": ["asdasd", "asdasd", "asdasd"],
+				"values": [false, false, true]
+			}]
+		}, {
+			"name": "Linux - BASH",
+			"questions": [{
+				"question": "Aby zapisać aktualną datę do pliku tekstowego o nazwie date należy wydać polecenie",
+				"answers": ["time –date > date", "time >> date", "time > date", "date > date"],
+				"values": [false, false, false, true]
+			},{
+				"question": "Aby zmierzyć czas wykonania komendy date należy wydać polecenie",
+				"answers": ["settime | date | gettime", "date –time", "date time", "time date"],
+				"values": [false, false, false, true]
+			},
+			{
+				"question": "Aby wyświetlić posortowaną listę procesów (wg pierwszej kolumny)",
+				"answers": ["ps | sort", "ps > temp; sort < temp", "ps > sort", "ps > temp | sort < temp"],
+				"values": [true, true, false, false]
+			},
+			{
+				"question": "Aby wyświetlić zawartość katalogu var w porządku alfabetycznym można użyć",
+				"answers": ["ls | sort", "ls > sort", "ls -> sort", "ls >> sort"],
+				"values": [true, false, false, false]
+			},
+			{
+				"question": "Aby na konsoli wyświetlić wynik dodawania 2+2 należy wydać polecenie",
+				"answers": ["Żadna z powyższych", "echo 2+2", "echo {2+2}", "echo {{2+2}}", "echo ${2+2}"],
+				"values": [true, false, false, false, false]
+			},
+			{
+				"question": "Aby wyświetlić na ekranie ciąg znaków: 1 2 3, można użyć polecenia (echo –n nie wypisuje na końcu znaku nowej linii)",
+				"answers": ["for x in 1 2 3; do echo –n $x ” ”; done", "mv=1; while [$mv –le 3]; do echo $mv; mv=$(( $mv + 1)); done", "for x in 1 to 3; do echo –n $x “ ”; done", "for x=1 to 3; do echo –n $x ” ”; done"],
+				"values": [true, true, false, false]
+			},
+			{
+				"question": "Aby wypisać drugą linię pliku tekstowego zawierającego trzy linie tekstu należy użyć polecenia",
+				"answers": ["head –n 2 dane | tail –n 1", "tail –n 2 dane | head –n 1", "head –n 2 dane | head –n 1", "tail –n 2 dane | tail –n 2"],
+				"values": [true, true, false, false]
+			},
+			{
+				"question": "Polecenie basename file.txt dla pliku file.txt położonego w katalogu domowym użytkownika adam da następującą odpowiedź",
+				"answers": ["file.txt", "file", "adam", "/adam/file.txt"],
+				"values": [true, false, false, false]
+			},
+			{
+				"question": "Aby wyświetlić zawartość katalogu var znajdując się bezpośrednio w tym katalogu można użyć polecenia. Uwaga 1. Nie ma znaczenia czy pliki zostaną wyświetlone w wierszach czy kolumnach",
+				"answers": ["ls", "temp=$(ls); echo $temp", "for f In $( ls /var/ ); do echo $f; done", "for f in $( /var/ ); do echo $f; done"],
+				"values": [true, true, true, false]
+			},
+			{
+				"question": "Aby wyświetlić pliki tylko o rozszerzeniach jpeg i jpg należy użyć polecenia",
+				"answers": ["ls *.{jpg,jpeg}", "ls *.jpg; ls *.jpeg", "ls *.j?pg", "ls *.j*eg", "ls *.(jpg,jpeg)"],
+				"values": [true, true, false, false, false]
+			},
+			{
+				"question": "Popularne powłoki (ang. shells) w systemie Linux to",
+				"answers": ["bash", "csh", "ksh", "Bourne-again shell", "gtk", "wsh", "Burnt awesome shell"],
+				"values": [true, true, true, true, false, false, false]
+			},
+			{
+				"question": "Wartości zmiennej myvar po wykonaniu linii kontrolnych 1 I 2 będzie wynosić <br> myvar=3<br> myfunc()<br> {<br> myvar=2<br> echo $myvar #1<br> }<br> myfunc<br> echo $myvar #2<br> Wybierz jedną lub więcej:",
+				"answers": ["2 i 2", "3 i 3", "3 I 2", "skrypt zgłosi błąd ”myvar already defined”"],
+				"values": [true, false, false, false]
+			},
+			{
+				"question": "> mv=\\”?\\”> <br> bash <br> > echo $mv #1<br> > exit<br> > export mv<br> > bash<br> > echo $mv #2<br>Wybierz jedną lub więcej:",
+				"answers": ["pusto i ?", "? i pusto", "? i ?", "pusto i pusto"],
+				"values": [true, false, false, false]
+			},
+			{
+				"question": "Poniższy program został uruchomiony w katalogu zawierającym następujące pliki: jeden.out dwa.sh trzy.conf. Wskaż, co pojawi się na wyjściu programu po jego wykonaniu.<br>#!/bin/bash<br>fileName=”przyklad”<br>for fileName in *<br>do<br>echo ${fileName}<br>done<br>Wybierz jedną lub więcej:",
+				"answers": ["dwa.sh", "jeden.out", "trzy.conf", "przykład", "fileName", "Zostanie wyświetlony komunikat o błędzie składni"],
+				"values": [true, true, true, false, false, false]
+			},
+			{
+				"question": "Po wykonaniu polecenia echo $(( 100/3 ))+1 wynikiem wyświetlonym na konsoli będzie",
+				"answers": ["33+1", "33", "34", "34,(3)+1"],
+				"values": [true, false, false, false]
+			},
+			{
+				"question": "Po wykonaniu polecenia echo $((2+2*2/8)) wynikiem będzie",
+				"answers": ["2", "1", "2,5", "0,75"],
+				"values": [true, false, false, false]
+			},
+			{
+				"question": "Aby sprawdzić, czy zmienna myvar jest równa 0 można użyć polecenia",
+				"answers": ["if [ $myvar –eq 0 ]; then …; fi", "if [ “$myvar” –eq 0 ]; …; fi", "if [ “myvar” –eq 0 ]; …; fi", "if [ myvar = 0 ]; then …; fi"],
+				"values": [true, false, false, false]
+			},
+			{
+				"question": "Wskaż wszystkie poprawne odpowiedzi. Jedną z instrukcji w skrypcie bash jest: DESTINATION=’pwd’",
+				"answers": ["Zmienna będzie zawierała ciąg znaków reprezentujący aktualną ścieżkę uruchomienia skryptu", "Zmienna będzie dostępna poza skryptem bash w programie napisanym w C++ po wywołaniu funkcji getenv z parametrem określającym nazwę zmiennej", "Podana konstrukcja jest niepoprawna", "Po inicjalizacji zmiennej na ekranie zostanie wypisany ciąg znaków"],
+				"values": [true, false, false, false]
+			},
+			{
+				"question": "Wskaż poprawnie napisany początek skryptu bash",
+				"answers": ["#!/bin/bash", "#!/dev/bash", "#!/etc/bash", "#!/var/bash"],
+				"values": [true, false, false, false]
+			},
+			{
+				"question": "Zawartość skryptu “skrypt.sh” jest następująca:<br>#!/bin/bash<br>x=’&USER’<br>echo ”$x”<br>Plik został uruchomiony poleceniem “./skrypt.sh” i został wykonany. W wyniku wykonania w konsoli zostanie wyświetlone:",
+				"answers": ["Napis ”$x”", "Napis ”$USER”", "Nazwa aktualnego użytkownika w systemie", "Pusta linijka"],
+				"values": [true, false, false, false]
+			},
+			{
+				"question": "Parametry przekazane do skryptu powłoki /bin/bash:",
+				"answers": ["Dostępne są w zmiennej $@", "Dostępne są w zmiennych $1, $2, $3 itd..", "Dostępne są w tablicy ”args”", "Powłoka /bin/bash nie obsługuje parametrów przekazywanych do skryptu"],
+				"values": [true, true, false, false]
+			},
+			{
+				"question": "Wskaż słowa zastrzeżone dla powłoki bash:",
+				"answers": ["Elif", "Esac", "Fi", "Select", "Time", "Echo", "Repeat"],
+				"values": [true, true, true, true, true, false, false]
+			},
+			{
+				"question": "Definicja zmiennej tablicowej dla powłoki bash wygląda następująco:",
+				"answers": ["zmienna = (wartość1, wartość2, wartość3)", "zmienna = [wartość1, wartość2, wartość3]", "zmienna[2] = {”wartość1”,”wartość2”};", "VAR<br>a:array[1..3] of integer;<br>a[1]=wartość1;<br>a[2]=wartość2;<br>a[3]=wartość3;"],
+				"values": [true, false, false, false]
+			},
+			{
+				"question": "Aby dopisać ”text” na końcu pliku file, wykorzystując język powłoki basha, należy użyć polecenia:",
+				"answers": ["echo ”text”>>file", "echo ”text”>file", "echo “text”<<file", "echo “text”<file"],
+				"values": [true, false, false, false]
+			},
+			{
+				"question": "Wypisanie “Hello World” na ekran, z wykorzystaniem języka powłoki basha, jest realizowane przez następujący ciąg instrukcji:",
+				"answers": ["napis=”Hello World”<br>echo $napis", "napis=”Hello World”<br>echo napis", "napis=”Hello World”<br>echo<<$napis"],
+				"values": [true, false, false]
+			},
+			{
+				"question": "Bash jest domyślną powłoką systemu/środowiska",
+				"answers": ["Cygwin dla Win32", "Mac OS X 10.4 Tiger", "Każdego Linuxa", "Każdego Unixa"],
+				"values": [true, true, false, false]
+			},
+			{
+				"question": "Wybierz wartość zmiennej tmp, dla której poniższy warunek zostanie spełniony i wyświetlony zostanie napis ”Hej”<br>if [ ${tmp:0:3}==”abc” ] then<br>echo ”Hej”<br>fi",
+				"answers": ["tmp=”abc”", "tmp=”abcdefg”", "tmp=”abdcef”", "tmp=”xyzabcd”"],
+				"values": [true, true, false, false]
+			}]
+		}, {
+			"name": "Linux - Zarządzanie oprogramowaniem",
+			"questions": [{
+				"question": "Za pomocą polecenia dpkg (z odpowiednimi parametrami) w systemie Ubuntu/Debian można:",
+				"answers": ["Usunąć wybrany pakiet", "Wyświetlić szczegółowe informacje na temat wybranego pakietu", "Zainstalować określony pakiet", "Pobrać wybrany pakiet z Internetu"],
+				"values": [true, true, true, false]
+			},{
+				"question": "aptitude to:",
+				"answers": ["interfejs tekstowy narzędzia APT", "polecenie służące do aktualizacji bazy pakietów w systemie Debian", "zaawansowany system do zarządzania oprogramowaniem w systemie Debian", "interfejs graficzny narzędzia APT"],
+				"values": [true, true, true, false]
+			},{
+				"question": "Zaznacz, które z poniższych wpisów są prawidłowymi wpisami w pliku sources –list narzędzia APT:",
+				"answers": ["deb cdrom:[Ubuntu 14.04_Trusty Tahr_-Release i386(20140416.1)]/ trusty main restricted", "deb http://pl.archive.ubuntu.com/ubuntu/ trusty main restricted universe multiverse", "deb-src http://pl.archive.ubuntu.com/ubuntu/ trusty main restricted", "deb ssh://user@myrepo.com trusty main restricted multiverse"],
+				"values": [true, true, true, true]
+			},{
+				"question": "Makefile to:",
+				"answers": ["Skrypt zawierający polecenia wykorzystywane podczas kompilacji plików źródłowych", "Polecenie służące do instalacji skompilowanych plików źródłowych", "Skrypt uruchamiany przed kompilacją pozwalający na sprawdzenie czy w systemie zainstalowane są wymagane biblioteki", "Skrypt uruchamiany przed kompilacją pozwalający na sprawdzenie czy w systemie zainstalowane są wymagane biblioteki"],
+				"values": [true, false, false, false]
+			},{
+				"question": "Zaznacz prawidłowe odpowiedzi dotyczące zarządzania oprogramowaniem pod systemem Linux Debian:",
+				"answers": ["Plik /etc/apt/sources.list to plik zawierający listę dostępnych repozytoriów wykorzystywanych przez narzędzie APT", "Aby mieć możliwość kompilowania plików źródłowych pod systemem Linux Debian musi być wcześnie zainstalowany pakiet build-essentials", "Pakiety binarne przeznaczone dla systemu Linux Ubuntu mają rozszerzenie deb.", "Aby mieć możliwość kompilowania plików źródłowych pod systemem Linux Debian musi być zainstalowany pakiet make-install", "Pakiety binarne przeznaczone dla systemu Linux Debian mają rozszerzenie pkg", "Pakiety binarne przeznaczone dla systemu Linux Ubuntu mają rozszerzenie .rpm."],
+				"values": [true, true, true, false, false, false]
+			},{
+				"question": "Wybierz polecenia narzędzia APT umożliwiające dodanie płyty cdrom do listy repozytorów w pliku /etc/apt/sources.list:",
+				"answers": ["apt-cdrom add", "apt-cdrom install", "apt-get cdrom", "apt-get install cdrom"],
+				"values": [true, false, false, false]
+			},{
+				"question": "Użytkownik rozpakował źródła program, zamierza go skompilować I zainstalować pod systemem Linux Debian. Po rozpakowaniu źródeł w katalogu ze źródłami znajduje się między innymi plik Makefile. Zaznacz poprawną, typową sekwencje poleceń, które należy wykonać aby w tym przypadku skompilować i zainstalować oprogramowanie:",
+				"answers": ["make; make install;", "/configure; make; make install;", "make configure; make; make install;", "make install; make; ./configure;"],
+				"values": [true, false, false, false]
+			},{
+				"question": "Zaznacz typy repozytoriów, które mogą być wykorzystane przez narzędzie APT do pobierania pakietów:",
+				"answers": ["cdrom //cd-rom", "file", "ftp", "ssh", "http", "telnet", "www"],
+				"values": [true, true, true, true, true, false, false]
+			},{
+				"question": "Polecenie „LDD” umożliwia:",
+				"answers": ["Sprawdzenie zależności od bibliotek zainstalowanego programu w systemie", "Instalację oprogramowania z lokalnej paczki .deb", "Sprawdzenie zależności od innych pakietów zainstalowanego programu w systemie", "Załadowanie i uruchomienie określonego programu w tle"],
+				"values": [true, false, false, false]
+			},{
+				"question": "Na jakie komponenty podzielone są repozytoria w systemach Linux Ubuntu:",
+				"answers": ["Multiverse", "Restricted", "Universe", "Global"],
+				"values": [true, true, true, false]
+			},{
+				"question": "make install to:",
+				"answers": ["Polecenie służące do instalacji skompilowanych plików źródłowych", "Polecenie służące do kompilacji plików źródłowych", "Skrypt uruchamiany przed kompilacją pozwalający na sprawdzenie czy w systemie zainstalowane są wymagane biblioteki", "Skrypt zawierający polecenia wykorzystywane podczas kompilacji plików źródłowych"],
+				"values": [true, false, false, false]
+			},{
+				"question": "W pliku /etc/sources.list:",
+				"answers": ["Mogą znajdować się m.in.repozytoria dodane za pomocą polecenia apt-cdrom", "W każdej linii zaczynającej się od słów „deb” lub „deb-src” musi znajdować się jedno ze słów: main, universe, restricted, multiverse", "Przyjmuje się, że wpisane tam pakiety należą do sekcji main, chyba ze podano inaczej", "Znajduje się lista wszystkich pakietów, których kopia kodu źródłowego znajduje się na lokalnym systemie"],
+				"values": [true, true, false, false]
+			},{
+				"question": "W pliku /etc/apt/sources-list znajduje się następujący wpis:<br>deb-src http://ftp.pl.debian.org/debian lenny main restricted<br>Zaznacz poprawne zdania dotyczące powyższego wpisu:",
+				"answers": ["Repozytorium, do którego odnosi się wpis zawiera pakiety źródłowe (do kompilacji)", "Wpis odnosi się do pakietów pochodzących z dystrybucji lenny", "Repozytorium, do którego odnosi się wpis zawiera pakiety binarne (pre-kompilowane pakiety, przeznaczone dla konkretnej dystrybucji)", "Wpis odnosi się do pakietów pochodzących z dystrybucji restricted"],
+				"values": [true, true, false, false]
+			},{
+				"question": "W pliku /etc/apt/sources-list znajduje się następujący wpis:<br>deb-src http://pl.archive.ubuntu.com/ubuntu/ trusty main restricted<br>Zaznacz poprawne zdania dotyczące powyższego wpisu:",
+				"answers": ["Repozytorium, do którego odnosi się wpis zawiera pakiety źródłowe (do kompilacji)", "Wpis odnosi się do pakietów pochodzących z dystrybucji trusty", "Repozytorium, do którego odnosi się wpis zawiera pakiety binarne (pre-kompilowane pakiety, przeznaczone dla konkretnej dystrybucji)", "Wpis odnosi się do pakietów pochodzących z dystrybucji restricted"],
+				"values": [true, true, false, false]
+			},{
+				"question": "Zaznacz, które z czynności wykonywane są przez skrypt configure:",
+				"answers": ["Sprawdzenie, czy w systemie są wszystkie składniki potrzebne do instalacji oprogramowania", "Wygenerowanie pliku config.status", "Instaluje program, kopiując skompilowane składniki aplikacji w odpowiednie miejsca w systemie plików", "Uruchamienie kompilacji plików źródłowych"],
+				"values": [true, true, false, false]
+			},{
+				"question": "Wykonanie skryptu configure umożliwia:",
+				"answers": ["Sprawdzenie, czy są wszystkie składniki potrzebne do instalacji programu", "Ustalenie wstępnej konfiguracji dla instalowanej aplikacji", "Wygenerowanie pliku nagłówkowego „C” (*.h) specyficznego dla danego systemu", "Zainstalowanie skompilowanych wcześniej składników aplikacji"],
+				"values": [true, true, true, false]
+			},
+			{
+				"question": "Podaj poprawne nazwy wierszy i kolumn opisujące poniższą tabelkę sekcji repozytoriów Debian:<br>III IV<br>I Main Restricted<br>II Universe Multiverse",
+				"answers": ["I-Wspierane, II-NIE wspierane, III-Oprogramowanie zgodne z licencją open source, IV-Oprogramowanie NIE zgodne z licencją open source", "I-NIE wspierane, II-Wspierane, III-Oprogramowanie NIE zgodne z licencją open source, IV-Oprogramowanie zgodne z licencją open source", "I-Wspierane, II-NIE wspierane, III-Oprogramowanie NIE zgodne z licencją open source , IV-Oprogramowanie zgodne z licencją open source", "I-NIE wspierane, II-Wspierane, III-Oprogramowanie zgodne z licencją open source, IV-Oprogramowanie NIE zgodne z licencją open source"],
+				"values": [true, false, false, false]
+			},
+			{
+				"question": "Zaznacz, które z poniższych elementów mogą być zawarte w pakietach binarnych aplikacji:",
+				"answers": ["Informacje o prawach autorskich", "Pliki konfiguracyjne", "Pliki wykonywalne", "Strony man", "Źródła aplikacji"],
+				"values": [true, true, true, true, false]
+			},
+			{
+				"question": "Zaznacz zdania prawdziwe w stosunku do systemu APT:",
+				"answers": ["Listę zainstalowanych pakietów można uzyskać poleceniem dpkg", "Repozytorium nie musi znajdować się w Internecie", "Wykorzystuje repozytoria zdefiniowane w /etc/apt/sources.list", "Sekcje repozytorim to: Main, Limited, Universe, Multiworld"],
+				"values": [true, true, true, false]
+			},
+			{
+				"question": "Wskaż wszystkie poprawne odpowiedzi dotyczące polecenia apt-get:",
+				"answers": ["Dostępny jest tylko z poziomu konta roota bądź osób uprawnionych", "Umożliwia instalację, aktualizację oraz deinstalację oprogramowania w systemie Linux", "Umożliwia kompilację programów ze źródeł", "Umożliwia zarządzanie bazą danych repozytoriów"],
+				"values": [true, true, false, false]
+			},
+			{
+				"question": "Wskaż wszystkie poprawne odpowiedzi dotyczące polecenia apt-cache:",
+				"answers": ["Umożliwia przegląd wszystkich pakietów", "Umożliwia sprawdzenie zależności pakietów", "Umożliwia zarządzanie repozytoriami w poszukiwaniu pakietów", "Umożliwia instalację oprogramowania źródeł"],
+				"values": [true, true, true, false]
+			},
+			{
+				"question": "Wskaż polecenie/a, które umożliwi Ci zlokalizowanie pliku tekstowego w strukturze katalogów domowych:",
+				"answers": ["Find", "Locate", "Whereis", "Which"],
+				"values": [true, true, false, false]
+			},
+			{
+				"question": "Jakie polecenia są dostępne dla użytkownika uprawnionego przez sudo w narzędziu apt-get w systemie Ubuntu/Debian?",
+				"answers": ["apt-get update", "apt-getremove nazwa_pakietu", "apt-get depends nazwa_pakietu", "apt-get touch nazwa_pliku"],
+				"values": [true, false, false, false]
+			},
+			{
+				"question": "W repozytorium pakietów, w sekcji Universe, znajduje się oprogramowanie:",
+				"answers": ["Wolne ale niewspierane", "Zgodne z licencją Open Source ale niewspierane przez dystrybucję", "Niezgodne z licencją Open Source, ale wspierane przez dystrybucję", "Niezgodne z licencją Open Source i niewspierane przez dystrybucję", "Wolne i wspierane", "Zamknięte, ale wspierane", "Zamknięte i niewspierane", "Zgodne z licencją Open Source i wspierane przez dystrybucję"],
+				"values": [true, true, false, false, false, false, false, false]
+			},
+			{
+				"question": "configure to:",
+				"answers": ["Skrypt uruchamiany przed kompilacją pozwalający na sprawdzenie czy w systemie zainstalowane są wymagane biblioteki", "Polecenie służące do instalacji skompilowanych plików źródłowych", "Polecenie służące do kompilacji plików źródłowych", "Skrypt zawierający polecenia wykorzystywane podczas kompilacji plików źródłowych"],
+				"values": [true, false, false, false]
+			},
+			{
+				"question": "Do instalacji pakietów służy narzędzie:",
+				"answers": ["apt-get", "aptitude", "dpkg", "synaptic"],
+				"values": [true, true, true, true]
+			},
+			{
+				"question": "Do zainstalowania nowego pakietu oprogramowania w systemie Linux Ubuntu można użyć programu:",
+				"answers": ["apt-get", "aptitude", "dpkg", "synaptic"],
+				"values": [true, true, true, true]
+			},
+			{
+				"question": "Pakiety binarne w dystrybucji Ubuntu mogą zawierać:",
+				"answers": ["Pliki konfiguracyjne", "Pliki wykonywalne", "Strony man", "Źródła aplikacji"],
+				"values": [true, true, true, false]
+			}
+			]
+		}
+	]
+}
