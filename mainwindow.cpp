@@ -216,12 +216,9 @@ void MainWindow::handleFileInput()
 
 void MainWindow::handleFileInputWeb()
 {
-    QString animation = "Loading data... 📥";
-    jsonHandler->setConnection("https://jsonkeeper.com/b/ARNB");
-    QMessageBox * messageBox = new QMessageBox(this);
-    messageBox->setText(animation);
-    messageBox->exec();
-    // Dialog animation
+    DialogLoading * loadingDialog = new DialogLoading(jsonHandler, this);
+    loadingDialog->setModal(true);
+    loadingDialog->show();
 }
 
 void MainWindow::handleNextQuestion(const QuestionType & _type)

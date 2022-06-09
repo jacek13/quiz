@@ -10,6 +10,7 @@ CONFIG += c++17
 
 SOURCES += \
     connectionthread.cpp \
+    dialogloading.cpp \
     emoji.cpp \
     jsonhandler.cpp \
     main.cpp \
@@ -18,12 +19,14 @@ SOURCES += \
 
 HEADERS += \
     connectionthread.h \
+    dialogloading.h \
     emoji.h \
     jsonhandler.h \
     mainwindow.h \
     quizstorage.h
 
 FORMS += \
+    dialogloading.ui \
     mainwindow.ui
 
 TRANSLATIONS += \

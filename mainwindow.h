@@ -16,6 +16,7 @@
 
 #include "jsonhandler.h"
 #include "quizstorage.h"
+#include "dialogloading.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
