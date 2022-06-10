@@ -54,10 +54,8 @@ private:
     QFileDialog * dialog;
     QVector<QCheckBox*> answersCheckBoxes;
     QVector<QRadioButton*> answersRadioButtons;
-    QVector<QLabel*> finalAnswersLabels;
     QVBoxLayout * verticalLayout;
     QVBoxLayout * verticalLayoutPrim;
-    QVBoxLayout * verticalLayoutSummary;
     QString filePath;
     QVector<QPair<QString, float>> finalAnswers; // TODO zrobic coś bardziej szczegółowego
 

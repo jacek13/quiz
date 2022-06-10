@@ -73,7 +73,7 @@ void JsonHandler::loadJsonFromFile(const QString _path)
                         {
                             numberOfTrueAnswers = 0;
                             QJsonArray valuesArray = values.toArray();
-                            for(int i = 0; i < valuesArray.size(); i++)
+                            for(int i = 0; i < valuesArray.size() && i < answersWithValues.size(); i++)
                             {
                                 answersWithValues[i].second = valuesArray.at(i).toBool();
                                 //qDebug() << value;
@@ -176,7 +176,7 @@ void JsonHandler::onResultFromPage(QNetworkReply * _reply)
                         {
                             numberOfTrueAnswers = 0;
                             QJsonArray valuesArray = values.toArray();
-                            for(int i = 0; i < valuesArray.size(); i++)
+                            for(int i = 0; i < valuesArray.size() && i < answersWithValues.size(); i++)
                             {
                                 answersWithValues[i].second = valuesArray.at(i).toBool();
                                 //qDebug() << value;

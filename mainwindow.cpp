@@ -1,6 +1,8 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 
+#include <QGuiApplication>
+#include <QScreen>
 #include <QPushButton>
 #include <QRandomGenerator>
 #include <QVBoxLayout>
@@ -20,10 +22,10 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
     ui->stackedWidget->setCurrentWidget(ui->pageMain);
     ui->comboBoxCategorySelection->setVisible(false);
+    // move(QGuiApplication::screens().at(0)->geometry().center() - frameGeometry().center()); // TODO to dziala ale powinno być wywaołane w innym miejscach
 
     allocateAttributes();
 
-    //QObject::connect(ui->pushButtonStartQuiz, &QPushButton::pressed, this, &MainWindow::);
     QObject::connect(timer, &QTimer::timeout, this, &MainWindow::handleTimer);
     QObject::connect(dialog, &QFileDialog::urlSelected, this, &MainWindow::onResultFromFileDialog);
     QObject::connect(jsonHandler, &JsonHandler::dataFromWebIsReady, this, &MainWindow::onResultFromWebDialog);
@@ -43,7 +45,6 @@ void MainWindow::allocateAttributes()
     timer = new QTimer(this);
     verticalLayout = new QVBoxLayout(ui->pageQuestionMultipleFromN);
     verticalLayoutPrim = new QVBoxLayout(ui->pageQuestionOneFromN);
-    verticalLayoutSummary = new QVBoxLayout(ui->pageSummary);
 }
 
 void MainWindow::updateMainComboBox()
@@ -149,17 +150,18 @@ void MainWindow::displayQuestionWidgetOneFromMany()
     Question currentQuestion = storageCurrentCategory.at(currentQuestionIndex);
     ui->questionOneFromN->setText(currentQuestion.getQuestionContent());
 
-    // Add button and label from ui
-    verticalLayoutPrim->addWidget(ui->QuestionAndTimerContainerPrim);
-    verticalLayoutPrim->addWidget(ui->ButtonNextQuestionPrim);
-
     for(auto &item : currentQuestion.getAnswers())
     {
         answersRadioButtons.push_back(new QRadioButton(item.first, ui->pageQuestionOneFromN));
         verticalLayoutPrim->addWidget(answersRadioButtons.back());
+        //ui->layoutPageOneFromN->addWidget(answersRadioButtons.back());
         qDebug() << answersRadioButtons.back()->text();
     }
-    ui->pageQuestionOneFromN->setLayout(verticalLayoutPrim);
+    ui->answersContainerOneFromN->setLayout(verticalLayoutPrim);
+    resize(minimumSizeHint());
+    // move(QGuiApplication::screens().at(0)->geometry().center() - frameGeometry().center()); // TODO to dziala ale powinno być wywaołane w innym miejscach
+
+// ui->layoutPageOneFromN->addLayout(verticalLayoutPrim, answersRadioButtons.size(), 1);
 
 }
 
@@ -169,16 +171,17 @@ void MainWindow::displayQuestionWidgetManyFromMany()
     Question currentQuestion = storageCurrentCategory.at(currentQuestionIndex);
     ui->questionNFromM->setText(currentQuestion.getQuestionContent());
 
-    verticalLayout->addWidget(ui->QuestionAndTimerContainet);
-    verticalLayout->addWidget(ui->ButtonNextQuestion);
-
     for(auto &item : currentQuestion.getAnswers())
     {
         answersCheckBoxes.push_back(new QCheckBox(item.first, ui->pageQuestionMultipleFromN));
         verticalLayout->addWidget(answersCheckBoxes.back());
+        //ui->layoutPageMFromN->addWidget(answersCheckBoxes.back());
         qDebug() << answersCheckBoxes.back()->text();
     }
-    ui->pageQuestionMultipleFromN->setLayout(verticalLayout);
+    //ui->pageQuestionMultipleFromN->setLayout(verticalLayout);
+    ui->answersConatainerMFromN->setLayout(verticalLayout);
+    resize(minimumSizeHint());
+    // move(QGuiApplication::screens().at(0)->geometry().center() - frameGeometry().center()); // TODO to dziala ale powinno być wywaołane w innym miejscach
     //TODO Przyciski Next, check
     //TODO walidacja
 }
@@ -191,21 +194,17 @@ void MainWindow::displaySummary()
     for(auto &item : finalAnswers)
     {
         score += item.second;
-        singleQuestionData = item.first + "\t" + QString::number(item.second);
-        finalAnswersLabels.push_back(new QLabel(singleQuestionData, ui->pageSummary));
-        ui->verticalLayoutSummary->addWidget(finalAnswersLabels.back());
+        singleQuestionData = item.first + "\t" + QString::number(item.second) + "\n";
+        ui->summaryAnswerList->addItem(singleQuestionData);
     }
     score /= (float)finalAnswers.size();
 
     QString finalScore = "Final Score: " + QString::number(score);
 
-    verticalLayoutSummary->addWidget(ui->summary);
-    verticalLayoutSummary->addWidget(ui->progressBar);
-    verticalLayoutSummary->addWidget(ui->scrollArea);
-
     ui->stackedWidget->setCurrentWidget(ui->pageSummary);
     ui->summary->setText(finalScore);
     ui->progressBar->setValue(score * 100.0f);
+    resize(minimumSizeHint());
 }
 
 void MainWindow::handleFileInput()
@@ -305,8 +304,11 @@ void MainWindow::on_ButtonReturn_clicked()
     AppElapsedTime = currentQuestionIndex = 0;
     quizIsActive = false;
     ui->stackedWidget->setCurrentWidget(ui->pageMain);
+    ui->summaryAnswerList->clear();
+    resize(minimumSizeHint());
+    // move(QGuiApplication::screens().at(0)->geometry().center() - frameGeometry().center()); // TODO to dziala ale powinno być wywaołane w innym miejscach
     finalAnswers.clear();
-    free<QLabel*>(finalAnswersLabels);
+    //free<QLabel*>(finalAnswersLabels);
 }
 
 void MainWindow::handleError(const QString &_message)
