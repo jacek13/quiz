@@ -6,6 +6,7 @@ void ConnectionThread::onResultFromPage(QNetworkReply *_reply)
 {
     dataLoaded = true;
     emit resultReady(_reply);
+    qDebug() << "onresultFromPage: " << _reply->errorString();
 }
 
 void ConnectionThread::doWhenRunning()
@@ -14,6 +15,7 @@ void ConnectionThread::doWhenRunning()
     //QObject::connect(networkManager, &QNetworkAccessManager::finished, this, &ConnectionThread::resultReady);
     QObject::connect(networkManager, &QNetworkAccessManager::finished, this, &ConnectionThread::onResultFromPage);
     networkManager->get(QNetworkRequest(QUrl(url)));
+    qDebug() << "Connection Thread is running!";
 }
 
 void ConnectionThread::run()

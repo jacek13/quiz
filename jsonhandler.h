@@ -21,8 +21,13 @@ public:
     JsonHandler(QObject * parent = nullptr);
 
     QuizStorage getParsedQuizData();
-    void loadJsonFromFile(const QString _path);
     ConnectionThread * connectionThread;
+#ifdef __wasm__
+    void loadJsonFromFile(const QString _name, QByteArray & _dataFromFile);
+    void loadJsonFromFile(const QString _path);
+#else
+    void loadJsonFromFile(const QString _path);
+#endif
 
 private:
     QNetworkAccessManager * networkManager;

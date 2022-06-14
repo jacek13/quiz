@@ -27,8 +27,16 @@ MainWindow::MainWindow(QWidget *parent)
     allocateAttributes();
 
     QObject::connect(timer, &QTimer::timeout, this, &MainWindow::handleTimer);
-    QObject::connect(dialog, &QFileDialog::urlSelected, this, &MainWindow::onResultFromFileDialog);
     QObject::connect(jsonHandler, &JsonHandler::dataFromWebIsReady, this, &MainWindow::onResultFromWebDialog);
+
+#ifdef __wasm__
+    jsonHandler->loadJsonFromFile("resources/questions.json");
+    storage = jsonHandler->getParsedQuizData();
+    updateMainComboBox();
+    ui->comboBoxCategorySelection->setVisible(true);
+#else
+    QObject::connect(dialog, &QFileDialog::urlSelected, this, &MainWindow::onResultFromFileDialog);
+#endif
 
     timer->start(1000);
 }
@@ -41,10 +49,13 @@ MainWindow::~MainWindow()
 void MainWindow::allocateAttributes()
 {
     jsonHandler = new JsonHandler(this);
-    dialog = new QFileDialog(this);
     timer = new QTimer(this);
     verticalLayout = new QVBoxLayout(ui->pageQuestionMultipleFromN);
     verticalLayoutPrim = new QVBoxLayout(ui->pageQuestionOneFromN);
+
+#ifndef __wasm__
+    dialog = new QFileDialog(this);
+#endif
 }
 
 void MainWindow::updateMainComboBox()
@@ -71,26 +82,19 @@ void MainWindow::on_pushButtonStartQuiz_clicked()
     try
     {
         if(storage.getStorageSize() < 1)
-            throw std::invalid_argument("Storage is empty!");
+        {
+            #ifndef __wasm__
+                throw std::invalid_argument("Storage is empty!");
+            #else
+                handleError("Storage is empty!");
+            #endif
+        }
         else
         {
             quizIsActive = true;
             storageCurrentCategory = storage.getQuestionsFromCategory(ui->comboBoxCategorySelection->currentText());
             auto localStorage = storageCurrentCategory.getStorage();
-            switch (localStorage[0].getQuestionType())
-            {
-            case QUESTION_MANY_FROM_MANY:
-                displayQuestionWidgetManyFromMany();
-                break;
-            case QUESTION_ONE_FROM_MANY:
-                displayQuestionWidgetOneFromMany();
-                break;
-            case QUESTION_TYPE_TEXT:
-                throw std::logic_error("Not implemented!");
-                break;
-            default:
-                break;
-            }
+            handleNextQuestion(localStorage[0].getQuestionType());
         }
     }
     catch(const std::invalid_argument & _ia)
@@ -115,6 +119,7 @@ void MainWindow::on_pushButtonStartQuiz_clicked()
     }
 }
 
+#ifndef __wasm__
 void MainWindow::onResultFromFileDialog(const QUrl &_url)
 {
     filePath = _url.toString();
@@ -126,6 +131,7 @@ void MainWindow::onResultFromFileDialog(const QUrl &_url)
     ui->comboBoxCategorySelection->setVisible(true);
     qDebug() << filePath;
 }
+#endif
 
 void MainWindow::onResultFromWebDialog()
 {
@@ -209,8 +215,30 @@ void MainWindow::displaySummary()
 
 void MainWindow::handleFileInput()
 {
+#ifdef __wasm__
+    auto fileContentReady = [&](const QString &filename, const QByteArray &fileContent)
+    {
+        if (filename.isEmpty())
+        {
+            qDebug() << "No file was selected.";
+        }
+        else
+        {
+            // Use fileName and fileContent
+            fileName = filename;
+            dataFromFile = fileContent;
+            jsonHandler->loadJsonFromFile(fileName, dataFromFile);
+
+            storage = jsonHandler->getParsedQuizData();
+            updateMainComboBox();
+            ui->comboBoxCategorySelection->setVisible(true);
+        }
+    };
+    QFileDialog::getOpenFileContent("*.json",  fileContentReady);
+#else
     dialog->setNameFilter("*.json");
     dialog->exec();
+#endif
 }
 
 void MainWindow::handleFileInputWeb()
@@ -313,13 +341,26 @@ void MainWindow::on_ButtonReturn_clicked()
 
 void MainWindow::handleError(const QString &_message)
 {
+#ifndef __wasm__
     QMessageBox * messageBox = new QMessageBox(this);
     messageBox->setText(_message);
     messageBox->exec();
+#else
+    //QWidget gc;
+    QMessageBox * messageBox = new QMessageBox(this);
+    messageBox->setText(_message);
+    messageBox->setModal(true);
+    messageBox->show();
+    qDebug() << _message;
+#endif
 }
 
 void MainWindow::on_LoadFileWeb_clicked()
 {
+#ifdef __wasm__
+    handleError("This option is not available in WebAssembly.");
+#else
     handleFileInputWeb();
+#endif
 }
 

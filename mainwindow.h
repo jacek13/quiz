@@ -31,8 +31,9 @@ public:
     ~MainWindow();
 private slots:
     void on_pushButtonStartQuiz_clicked();
-
+#ifndef __wasm__
     void onResultFromFileDialog(const QUrl& _url);
+#endif
     void onResultFromWebDialog();
     void handleTimer();
     void displayQuestionWidgetOneFromMany();
@@ -51,13 +52,18 @@ private slots:
 private:
     Ui::MainWindow *ui;
     QTimer * timer;
-    QFileDialog * dialog;
     QVector<QCheckBox*> answersCheckBoxes;
     QVector<QRadioButton*> answersRadioButtons;
     QVBoxLayout * verticalLayout;
     QVBoxLayout * verticalLayoutPrim;
     QString filePath;
     QVector<QPair<QString, float>> finalAnswers; // TODO zrobic coś bardziej szczegółowego
+#ifdef __wasm__
+    QByteArray dataFromFile;
+    QString fileName;
+#else
+    QFileDialog * dialog;
+#endif
 
     QuizStorage storage;
     QuizStorage storageCurrentCategory;
