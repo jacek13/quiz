@@ -19,7 +19,6 @@ DialogLoading::DialogLoading(JsonHandler *& _handler, QWidget *parent) :
     // Setting timer
     timer = new QTimer(this);
     QObject::connect(timer, &QTimer::timeout, this, &DialogLoading::handleTimer);
-    timer->start(100);
     startAnimation = closeState = false;
 }
 
@@ -29,9 +28,12 @@ DialogLoading::~DialogLoading()
 }
 
 void DialogLoading::on_ButtonClose_clicked()
-{
+{ 
     if(!closeState)
+    {
+        timer->start(100);
         startAnimation = true;
+    }
 
     if(startAnimation)
     {

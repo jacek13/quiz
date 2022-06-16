@@ -57,7 +57,7 @@ private:
     QVBoxLayout * verticalLayout;
     QVBoxLayout * verticalLayoutPrim;
     QString filePath;
-    QVector<QPair<QString, float>> finalAnswers; // TODO zrobic coś bardziej szczegółowego
+    QVector<QPair<Question, QVector<bool>>> finalAnswers;
 #ifdef __wasm__
     QByteArray dataFromFile;
     QString fileName;

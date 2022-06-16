@@ -10,6 +10,8 @@ WASM {
 CONFIG += -feature-thread
 QMAKE_LFLAGS += -fwasm-exceptions
 #QMAKE_CXXFLAGS += -fwasm-exceptions
+#QMAKE_CXXFLAGS += --preload-file /resources
+QMAKE_LFLAGS += --preload-file ./resources
 } else {
 
 }

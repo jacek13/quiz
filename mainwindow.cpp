@@ -30,7 +30,8 @@ MainWindow::MainWindow(QWidget *parent)
     QObject::connect(jsonHandler, &JsonHandler::dataFromWebIsReady, this, &MainWindow::onResultFromWebDialog);
 
 #ifdef __wasm__
-    jsonHandler->loadJsonFromFile("resources/questions.json");
+    QString solutionDirectory = QCoreApplication::applicationDirPath() + "/resources/questions.json";
+    jsonHandler->loadJsonFromFile(solutionDirectory);
     storage = jsonHandler->getParsedQuizData();
     updateMainComboBox();
     ui->comboBoxCategorySelection->setVisible(true);
@@ -144,7 +145,7 @@ void MainWindow::handleTimer()
 {
     if(quizIsActive)
     {
-        QString timeLabelUpdate = QString::number(++AppElapsedTime) + " [s]";
+        QString timeLabelUpdate = "Time: " + QString::number(++AppElapsedTime) + " [s]";
         ui->TimerLabel->setText(timeLabelUpdate);
         ui->TimerLabelPrim->setText(timeLabelUpdate);
     }
@@ -154,7 +155,9 @@ void MainWindow::displayQuestionWidgetOneFromMany()
 {
     ui->stackedWidget->setCurrentWidget(ui->pageQuestionOneFromN);
     Question currentQuestion = storageCurrentCategory.at(currentQuestionIndex);
-    ui->questionOneFromN->setText(currentQuestion.getQuestionContent());
+    //ui->questionOneFromN->setText(currentQuestion.getQuestionContent());
+    ui->questionOneFromN->clear();
+    ui->questionOneFromN->addItem(currentQuestion.getQuestionContent());
 
     for(auto &item : currentQuestion.getAnswers())
     {
@@ -175,7 +178,9 @@ void MainWindow::displayQuestionWidgetManyFromMany()
 {
     ui->stackedWidget->setCurrentWidget(ui->pageQuestionMultipleFromN);
     Question currentQuestion = storageCurrentCategory.at(currentQuestionIndex);
-    ui->questionNFromM->setText(currentQuestion.getQuestionContent());
+    //ui->questionNFromM->setText(currentQuestion.getQuestionContent());
+    ui->questionNFromM->clear();
+    ui->questionNFromM->addItem(currentQuestion.getQuestionContent());
 
     for(auto &item : currentQuestion.getAnswers())
     {
@@ -196,16 +201,69 @@ void MainWindow::displaySummary()
 {
     quizIsActive = false;
     QString singleQuestionData = "";
+    size_t numberOfCorrectAnswers = 0;
+    float singleQuestionScore = 0.0f;
     float score = 0.0f;
+
+    //ui->summaryAnswerList->addItem("+ means correct answer | - means wrong answer.\n");
     for(auto &item : finalAnswers)
     {
-        score += item.second;
-        singleQuestionData = item.first + "\t" + QString::number(item.second) + "\n";
+        singleQuestionScore = 0.0f;
+        singleQuestionData = item.first.getQuestionContent() + '\n';
+        numberOfCorrectAnswers = 0;
+
+        if(item.first.getQuestionType() == QUESTION_MANY_FROM_MANY)
+        {
+            auto currentCorrectAnswers = item.first.getAnswers();
+            for(int i = 0; i < currentCorrectAnswers.size(); i++ )
+            {
+                singleQuestionData += "\t-" + currentCorrectAnswers[i].first + " (is ";
+                singleQuestionData += ( currentCorrectAnswers[i].second ? "true)" : "false)");
+                if(item.second[i] == currentCorrectAnswers[i].second)
+                {
+                    ++numberOfCorrectAnswers;
+                    singleQuestionData += "\n\t\t-User answer was: ";
+                    singleQuestionData += " +CORRECT\n";
+                }
+                else
+                {
+                    singleQuestionData += "\n\t\t-User answer was: ";
+                    singleQuestionData += " -WRONG\n";
+                }
+            }
+            singleQuestionScore = (float)numberOfCorrectAnswers / (float)currentCorrectAnswers.size();
+            //ui->summaryAnswerList->addItem(singleQuestionData);
+        }
+        else if( item.first.getQuestionType() == QUESTION_ONE_FROM_MANY)
+        {
+            auto currentCorrectAnswers = item.first.getAnswers();
+            for(int i = 0; i < currentCorrectAnswers.size(); i++ )
+            {
+                if(currentCorrectAnswers[i].second)
+                {
+                    singleQuestionData += "\t-Correct answer is: " + currentCorrectAnswers[i].first + '\n';
+                    singleQuestionData += "\t-User answer was: ";
+                    if(currentCorrectAnswers[i].second == item.second[i])
+                    {
+                        ++numberOfCorrectAnswers;
+                        singleQuestionData += " +CORRECT\n";
+                    }
+                    else
+                        singleQuestionData += " -WRONG\n";
+                }
+            }
+            singleQuestionScore = (numberOfCorrectAnswers == 1 ? 1.0f : 0.0f);
+        }
+        else
+            qDebug() << "Unknown question type!";
+
         ui->summaryAnswerList->addItem(singleQuestionData);
+        score += singleQuestionScore;
     }
+
     score /= (float)finalAnswers.size();
 
-    QString finalScore = "Final Score: " + QString::number(score);
+    QString finalScore = "Final Score: " + QString::number(score) + "%";
 
     ui->stackedWidget->setCurrentWidget(ui->pageSummary);
     ui->summary->setText(finalScore);
@@ -275,18 +333,21 @@ void MainWindow::on_loadFile_clicked()
 
 void MainWindow::on_ButtonNextQuestion_clicked()
 {
-    size_t numberOfCorrectAnswers = 0;
+    //size_t numberOfCorrectAnswers = 0; //PRZENIESC DO SUMMARY
     Question currentQuestion = storageCurrentCategory.at(currentQuestionIndex);
-    auto currentCorrectAnswers = currentQuestion.getAnswers();
+    QVector<bool> currentUserAnswers;
+    auto currentCorrectAnswers = currentQuestion.getAnswers(); //PRZENIESC DO SUMMARY
     for(int i = 0; i < currentCorrectAnswers.size(); i++ )
     {
-        if(answersCheckBoxes[i]->isChecked() == currentCorrectAnswers[i].second)
-        {
-            ++numberOfCorrectAnswers;
-        }
+        //if(answersCheckBoxes[i]->isChecked() == currentCorrectAnswers[i].second)
+        //{
+        //    ++numberOfCorrectAnswers;
+        //}
+        currentUserAnswers.push_back(answersCheckBoxes[i]->isChecked());
     }
     free<QCheckBox*>(answersCheckBoxes);
-    finalAnswers.push_back(QPair<QString, float>(currentQuestion.getQuestionContent(), (float)numberOfCorrectAnswers / (float)currentCorrectAnswers.size()));
+    // (float)numberOfCorrectAnswers / (float)currentCorrectAnswers.size()
+    finalAnswers.push_back(QPair<Question, QVector<bool>>(currentQuestion, currentUserAnswers));
     ++currentQuestionIndex;
     answersCheckBoxes.clear();
 
@@ -302,18 +363,20 @@ void MainWindow::on_ButtonNextQuestion_clicked()
 
 void MainWindow::on_ButtonNextQuestionPrim_clicked()
 {
-    size_t numberOfCorrectAnswers = 0;
+    //size_t numberOfCorrectAnswers = 0;
+    QVector<bool> currentUserAnswers;
     Question currentQuestion = storageCurrentCategory.at(currentQuestionIndex);
     auto currentCorrectAnswers = currentQuestion.getAnswers();
     for(int i = 0; i < currentCorrectAnswers.size(); i++ )
     {
-        if(currentCorrectAnswers[i].second && currentCorrectAnswers[i].second == answersRadioButtons[i]->isChecked())
-        {
-            ++numberOfCorrectAnswers;
-        }
+        //if(currentCorrectAnswers[i].second && currentCorrectAnswers[i].second == answersRadioButtons[i]->isChecked())
+        //{
+        //    ++numberOfCorrectAnswers;
+        //}
+        currentUserAnswers.push_back(answersRadioButtons[i]->isChecked());
     }
     free<QRadioButton*>(answersRadioButtons);
-    finalAnswers.push_back(QPair<QString, float>(currentQuestion.getQuestionContent(), (float)numberOfCorrectAnswers));
+    finalAnswers.push_back(QPair<Question, QVector<bool>>(currentQuestion, currentUserAnswers));
     ++currentQuestionIndex;
     answersRadioButtons.clear();
 
