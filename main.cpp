@@ -21,7 +21,11 @@ int main(int argc, char *argv[])
             }
         }
         MainWindow w;
+#ifdef __wasm__
+        w.showMaximized();
+#else
         w.show();
+#endif
         return a.exec();
     }
     catch(std::exception & _e)

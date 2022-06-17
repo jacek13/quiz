@@ -16,8 +16,6 @@ class JsonHandler : public QObject
 {
     Q_OBJECT
 public:
-    //explicit JsonHandler() = default;
-    //~JsonHandler() = default;
     JsonHandler(QObject * parent = nullptr);
 
     QuizStorage getParsedQuizData();
@@ -32,9 +30,11 @@ public:
 private:
     QNetworkAccessManager * networkManager;
     QuizStorage quiz;
+
 public slots:
     void setConnection(QString _url);
     void onResultFromPage(QNetworkReply * _reply);
+
 signals:
     void dataFromWebIsReady();
 };

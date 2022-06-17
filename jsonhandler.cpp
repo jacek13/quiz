@@ -36,7 +36,7 @@ void JsonHandler::loadJsonFromFile(const QString _name, QByteArray & _dataFromFi
         {
             QJsonObject subtree = item.toObject();
             QString currentCategory = subtree.value("name").toString();
-            QuestionType currentQuestionType = QUESTION_ONE_FROM_MANY;
+            //QuestionType currentQuestionType = QUESTION_ONE_FROM_MANY;
             qDebug() << subtree.keys().at(0) << " : " << subtree.value("name").toString();
             qDebug() << subtree.keys().at(1) << " : " << subtree.value("questions").toString();
             QJsonValue subJv = subtree.value("questions");
@@ -128,7 +128,7 @@ void JsonHandler::loadJsonFromFile(const QString _path)
             {
                 QJsonObject subtree = item.toObject();
                 QString currentCategory = subtree.value("name").toString();
-                QuestionType currentQuestionType = QUESTION_ONE_FROM_MANY;
+                //QuestionType currentQuestionType = QUESTION_ONE_FROM_MANY;
                 qDebug() << subtree.keys().at(0) << " : " << subtree.value("name").toString();
                 qDebug() << subtree.keys().at(1) << " : " << subtree.value("questions").toString();
                 QJsonValue subJv = subtree.value("questions");
@@ -238,7 +238,7 @@ void JsonHandler::onResultFromPage(QNetworkReply * _reply)
             {
                 QJsonObject subtree = item.toObject();
                 QString currentCategory = subtree.value("name").toString();
-                QuestionType currentQuestionType = QUESTION_ONE_FROM_MANY;
+                //QuestionType currentQuestionType = QUESTION_ONE_FROM_MANY;
                 qDebug() << subtree.keys().at(0) << " : " << subtree.value("name").toString();
                 qDebug() << subtree.keys().at(1) << " : " << subtree.value("questions").toString();
                 QJsonValue subJv = subtree.value("questions");

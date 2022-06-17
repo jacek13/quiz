@@ -14,11 +14,25 @@ QuizStorage::QuizStorage(const QuizStorage &_quiz)
         {
             storage.push_back(item);
         }
+    //mersenTwister = _quiz.mersenTwister;
 }
 
 QuizStorage::QuizStorage(QVector<Question> _storage)
 {
     storage = _storage;
+}
+
+void QuizStorage::shuffle()
+{
+    std::random_device randomDevice;
+    std::mt19937 mersenTwister(randomDevice());
+
+    std::shuffle(storage.begin(), storage.end(), mersenTwister);
+
+    for(auto & question : storage)
+    {
+        question.shuffleAnswers();
+    }
 }
 
 bool QuizStorage::addQuestionToCategory(Question _question)
@@ -93,6 +107,14 @@ void Question::addQuestionContent(QString _question)
 void Question::addAnswer(QString _answer, bool _value)
 {
     answers.push_back(QPair<QString, bool>(_answer, _value)); // TODO validation!
+}
+
+void Question::shuffleAnswers()
+{
+    std::random_device randomDevice;
+    std::mt19937 mersenTwister(randomDevice());
+
+    std::shuffle(answers.begin(), answers.end(), mersenTwister);
 }
 
 bool Question::setAnswerType(QuestionType _type)

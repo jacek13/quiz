@@ -5,6 +5,8 @@
 #include <QVector>
 #include <QPair>
 #include <QString>
+#include <algorithm>
+#include <random>
 
 enum QuestionType
 {
@@ -22,6 +24,7 @@ public:
 
     void addQuestionContent(QString _question);
     void addAnswer(QString _answer, bool _value);
+    void shuffleAnswers();
     bool setAnswerType(QuestionType _type = QUESTION_ONE_FROM_MANY);
     bool setCategory(QString _category);
 
@@ -44,13 +47,15 @@ public:
     QuizStorage(const QuizStorage& _quiz);
     QuizStorage(QVector<Question> _storage);
 
+    void shuffle();
     bool addQuestionToCategory(Question _question);
     int getStorageSize();
     const QVector<Question> getStorage() const;
+    const Question at(int _index) const;
     QVector<Question> getStorageShuddled();
     QVector<QString> getCategries();
     QuizStorage getQuestionsFromCategory(const QString & _category);
-    const Question at(int _index) const;
+
 protected:
     QVector<Question> storage;
 };

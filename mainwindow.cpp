@@ -94,6 +94,7 @@ void MainWindow::on_pushButtonStartQuiz_clicked()
         {
             quizIsActive = true;
             storageCurrentCategory = storage.getQuestionsFromCategory(ui->comboBoxCategorySelection->currentText());
+            storageCurrentCategory.shuffle();
             auto localStorage = storageCurrentCategory.getStorage();
             handleNextQuestion(localStorage[0].getQuestionType());
         }
@@ -155,23 +156,28 @@ void MainWindow::displayQuestionWidgetOneFromMany()
 {
     ui->stackedWidget->setCurrentWidget(ui->pageQuestionOneFromN);
     Question currentQuestion = storageCurrentCategory.at(currentQuestionIndex);
-    //ui->questionOneFromN->setText(currentQuestion.getQuestionContent());
     ui->questionOneFromN->clear();
     ui->questionOneFromN->addItem(currentQuestion.getQuestionContent());
+    //ui->questionOneFromN->setWrapping(true);
+    ui->questionOneFromN->setWordWrap(true);
 
     for(auto &item : currentQuestion.getAnswers())
     {
-        answersRadioButtons.push_back(new QRadioButton(item.first, ui->pageQuestionOneFromN));
+        auto radioButton = new QRadioButton(item.first, ui->pageQuestionOneFromN);
+        /* TODO zawijanie tekstu
+        auto label = new QLabel(item.first, radioButton);
+        label->setWordWrap(true);
+        auto buttonWithLabelLayout = new QHBoxLayout(radioButton);
+        buttonWithLabelLayout->addWidget(label);
+        */
+        answersRadioButtons.push_back(radioButton);
         verticalLayoutPrim->addWidget(answersRadioButtons.back());
-        //ui->layoutPageOneFromN->addWidget(answersRadioButtons.back());
         qDebug() << answersRadioButtons.back()->text();
     }
+
     ui->answersContainerOneFromN->setLayout(verticalLayoutPrim);
-    resize(minimumSizeHint());
+    // resize(minimumSizeHint());
     // move(QGuiApplication::screens().at(0)->geometry().center() - frameGeometry().center()); // TODO to dziala ale powinno być wywaołane w innym miejscach
-
-// ui->layoutPageOneFromN->addLayout(verticalLayoutPrim, answersRadioButtons.size(), 1);
-
 }
 
 void MainWindow::displayQuestionWidgetManyFromMany()
@@ -181,17 +187,26 @@ void MainWindow::displayQuestionWidgetManyFromMany()
     //ui->questionNFromM->setText(currentQuestion.getQuestionContent());
     ui->questionNFromM->clear();
     ui->questionNFromM->addItem(currentQuestion.getQuestionContent());
+    //ui->questionNFromM->setWrapping(true);
+    ui->questionNFromM->setWordWrap(true);
 
     for(auto &item : currentQuestion.getAnswers())
     {
-        answersCheckBoxes.push_back(new QCheckBox(item.first, ui->pageQuestionMultipleFromN));
+        auto checkBox = new QCheckBox(item.first, ui->pageQuestionMultipleFromN);
+        /* TODO zawijanie tekstu
+        auto label = new QLabel(item.first, checkBox);
+        label->setWordWrap(true);
+        auto buttonWithLabelLayout = new QHBoxLayout(checkBox);
+        buttonWithLabelLayout->addWidget(label);
+        */
+        answersCheckBoxes.push_back(checkBox);
         verticalLayout->addWidget(answersCheckBoxes.back());
         //ui->layoutPageMFromN->addWidget(answersCheckBoxes.back());
         qDebug() << answersCheckBoxes.back()->text();
     }
     //ui->pageQuestionMultipleFromN->setLayout(verticalLayout);
     ui->answersConatainerMFromN->setLayout(verticalLayout);
-    resize(minimumSizeHint());
+    // resize(minimumSizeHint());
     // move(QGuiApplication::screens().at(0)->geometry().center() - frameGeometry().center()); // TODO to dziala ale powinno być wywaołane w innym miejscach
     //TODO Przyciski Next, check
     //TODO walidacja
@@ -205,7 +220,6 @@ void MainWindow::displaySummary()
     float singleQuestionScore = 0.0f;
     float score = 0.0f;
 
-    //ui->summaryAnswerList->addItem("+ means correct answer | - means wrong answer.\n");
     for(auto &item : finalAnswers)
     {
         singleQuestionScore = 0.0f;
@@ -232,7 +246,6 @@ void MainWindow::displaySummary()
                 }
             }
             singleQuestionScore = (float)numberOfCorrectAnswers / (float)currentCorrectAnswers.size();
-            //ui->summaryAnswerList->addItem(singleQuestionData);
         }
         else if( item.first.getQuestionType() == QUESTION_ONE_FROM_MANY)
         {
@@ -263,12 +276,12 @@ void MainWindow::displaySummary()
 
     score /= (float)finalAnswers.size();
 
-    QString finalScore = "Final Score: " + QString::number(score) + "%";
+    QString finalScore = "Final Score: " + QString::number(score * 100.0f) + "%";
 
     ui->stackedWidget->setCurrentWidget(ui->pageSummary);
     ui->summary->setText(finalScore);
     ui->progressBar->setValue(score * 100.0f);
-    resize(minimumSizeHint());
+    // resize(minimumSizeHint());
 }
 
 void MainWindow::handleFileInput()
@@ -324,29 +337,20 @@ void MainWindow::handleNextQuestion(const QuestionType & _type)
     }
 }
 
-
 void MainWindow::on_loadFile_clicked()
 {
     handleFileInput();
 }
 
-
 void MainWindow::on_ButtonNextQuestion_clicked()
 {
-    //size_t numberOfCorrectAnswers = 0; //PRZENIESC DO SUMMARY
     Question currentQuestion = storageCurrentCategory.at(currentQuestionIndex);
     QVector<bool> currentUserAnswers;
-    auto currentCorrectAnswers = currentQuestion.getAnswers(); //PRZENIESC DO SUMMARY
-    for(int i = 0; i < currentCorrectAnswers.size(); i++ )
-    {
-        //if(answersCheckBoxes[i]->isChecked() == currentCorrectAnswers[i].second)
-        //{
-        //    ++numberOfCorrectAnswers;
-        //}
+
+    for(int i = 0; i < currentQuestion.getAnswers().size(); i++ )
         currentUserAnswers.push_back(answersCheckBoxes[i]->isChecked());
-    }
+
     free<QCheckBox*>(answersCheckBoxes);
-    // (float)numberOfCorrectAnswers / (float)currentCorrectAnswers.size()
     finalAnswers.push_back(QPair<Question, QVector<bool>>(currentQuestion, currentUserAnswers));
     ++currentQuestionIndex;
     answersCheckBoxes.clear();
@@ -363,18 +367,12 @@ void MainWindow::on_ButtonNextQuestion_clicked()
 
 void MainWindow::on_ButtonNextQuestionPrim_clicked()
 {
-    //size_t numberOfCorrectAnswers = 0;
     QVector<bool> currentUserAnswers;
     Question currentQuestion = storageCurrentCategory.at(currentQuestionIndex);
-    auto currentCorrectAnswers = currentQuestion.getAnswers();
-    for(int i = 0; i < currentCorrectAnswers.size(); i++ )
-    {
-        //if(currentCorrectAnswers[i].second && currentCorrectAnswers[i].second == answersRadioButtons[i]->isChecked())
-        //{
-        //    ++numberOfCorrectAnswers;
-        //}
+
+    for(int i = 0; i < currentQuestion.getAnswers().size(); i++ )
         currentUserAnswers.push_back(answersRadioButtons[i]->isChecked());
-    }
+
     free<QRadioButton*>(answersRadioButtons);
     finalAnswers.push_back(QPair<Question, QVector<bool>>(currentQuestion, currentUserAnswers));
     ++currentQuestionIndex;
@@ -396,7 +394,7 @@ void MainWindow::on_ButtonReturn_clicked()
     quizIsActive = false;
     ui->stackedWidget->setCurrentWidget(ui->pageMain);
     ui->summaryAnswerList->clear();
-    resize(minimumSizeHint());
+    // resize(minimumSizeHint());
     // move(QGuiApplication::screens().at(0)->geometry().center() - frameGeometry().center()); // TODO to dziala ale powinno być wywaołane w innym miejscach
     finalAnswers.clear();
     //free<QLabel*>(finalAnswersLabels);
